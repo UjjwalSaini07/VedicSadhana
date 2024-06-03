@@ -18,7 +18,3 @@
   - Open Your Terminal and Type
   - `npm i`
   - `npm start`
-
-    
-# Join the Discord
-https://discord.gg/uD7x8Mah

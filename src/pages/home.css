@@ -1,0 +1,46 @@
+.custom-dropdown {
+  max-height: 48px;
+  overflow-y: hidden;
+  transition: max-height 0.2s ease-in-out; 
+  position: relative;
+}
+
+.custom-dropdown:focus {
+  max-height: 200px; 
+  overflow-y: auto; 
+}
+
+.custom-dropdown option {
+  background-color: #ffedcc;
+  color: #ff6f00;
+}
+
+.custom-dropdown::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-dropdown::-webkit-scrollbar-thumb {
+  background-color: #ff6f00;
+  border-radius: 4px;
+}
+
+
+
+
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+
