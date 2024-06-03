@@ -1,3 +1,5 @@
+Explore the timeless wisdom of the Bhagavad Gita with in-depth shlokas, translations, and commentaries, connecting you to India's rich spiritual heritage.
+
 # <a name="2 Data Source">Data source:</a>
 
 - Data For This Project is Get From https://github.com/vedicscriptures/bhagavad-gita-data this repository.
