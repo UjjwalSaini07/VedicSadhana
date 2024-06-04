@@ -79,7 +79,7 @@ Contributions are always welcome!
 
 - Fork the repository.
 - Create a new branch:
-- Make your changes and commit them
+- Make your changes and commit on the pull request.
 - Push to the branch
 ```bash
   git push origin feature/YourFeatureName
@@ -92,7 +92,7 @@ Contributions are always welcome!
 To run tests, run the following command
 
 ```bash
-  https://divine-sadhana.vercel.app/
+  https://vedic-sadhana.vercel.app/
 ```
 
 
