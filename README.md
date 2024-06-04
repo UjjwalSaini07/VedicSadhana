@@ -92,7 +92,7 @@ Contributions are always welcome!
 To run tests, run the following command
 
 ```bash
-  https://divine-sadhana.vercel.app/
+  https://vedic-sadhana.vercel.app/
 ```
 
 
