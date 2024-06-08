@@ -108,8 +108,10 @@ const Homeque = () => {
               to={`/api/chapter/${chap}/shlok/${ver - 1}`}
               className="transform rotate-180"
             >
+              <br></br>
+              
               <img
-                className="w-8 h-6 sm:w-10 sm:h-8 opacity-20 hover:opacity-50 duration-300 cursor-pointer"
+                className="w-12 h-8 sm:w-10 sm:h-8 opacity-100 hover:opacity-50 duration-300 cursor-pointer"
                 onClick={handlePrevious}
                 src={icon}
                 alt="Previous"
@@ -117,7 +119,7 @@ const Homeque = () => {
             </Link>
             <Link to={`/api/chapter/${chap}/shlok/${ver + 1}`}>
               <img
-                className="w-8 h-6 sm:w-10 sm:h-8 opacity-20 hover:opacity-50 duration-300 cursor-pointer"
+                className="w-12 h-8 sm:w-10 sm:h-8 opacity-20 hover:opacity-50 duration-300 cursor-pointer"
                 onClick={handleNext}
                 src={icon}
                 alt="Next"
