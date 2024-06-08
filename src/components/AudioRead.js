@@ -23,15 +23,7 @@ export default function AudioRead({ slok ,speech}) {
         setspeakSloke(!speakSloke)
         readAloud();
     }
-
-    // useEffect(() => {
-    //     const populateVoices = () => {
-    //         const voices = window.speechSynthesis.getVoices()
-    //         speech.voice = voices[10]//setting default voice
-    //     }
-    //     window.speechSynthesis.onvoiceschanged = populateVoices;
-    // }, [])
-
+    
     const changeVoice = (event) => {
         const voices = window.speechSynthesis.getVoices()
         speech.voice = voices[event.target.value];
