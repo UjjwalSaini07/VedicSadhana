@@ -24,23 +24,36 @@
   border-radius: 4px;
 }
 
-
-
-
-
 @keyframes float {
     0% {
         transform: translateY(0);
     }
-
     50% {
         transform: translateY(-10px);
     }
-
     100% {
         transform: translateY(0);
     }
 }
 
+@media (min-width: 768px) {
+  .go-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0; /* Reset margin for the button container in larger screens */
+  }
 
+  .go-button {
+    margin-left: 4px; /* Adjust this value as needed for spacing */
+    margin-top: 20px; /* Add margin-top to position the button 20px down */
+  }
 
+  .read-shlok-button {
+    margin-left: 40px; /* Move the button 50px to the right */
+  }
+
+  .chapter-summary-button {
+    margin-left: 50px; /* Move the button 50px to the right */
+  }
+}

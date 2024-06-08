@@ -49,3 +49,20 @@ body{
     transform: rotate(360deg);
   }
 }
+
+/*  CSS for Add Voice Reading Capability */
+.AudioReadbtn
+{
+  margin-right: 10px;
+}
+.AudioReadbtn :active
+{
+  transform: scale(.9);
+}
+
+.select-voice
+{
+  width: 50px;
+  /* background-color: orange; */
+  border-radius: 10px;
+}
