@@ -1,4 +1,4 @@
-/*Todo: Changes Done */
+/*Todo: Changes Done */  
 #preloader {
   height: 100vh;
   width: 100%;
@@ -15,8 +15,10 @@
 }
 
 #preloader.preloaderremove {
+  color:#0e1538;
   height: 0vh;
   opacity: 0;
+  fill:#FF6600
 }
 
 .preloaderhide {
