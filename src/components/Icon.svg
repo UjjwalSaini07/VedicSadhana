@@ -5,7 +5,9 @@
 
 <defs>
 
-<style>.cls-1{fill:none;stroke:#ffff;stroke-linecap:round;stroke-linejoin:round;stroke-width:30px;}</style>
+<style>
+.cls-1{fill:#ffff;stroke:#FF6600;stroke-linecap:round;stroke-linejoin:round;stroke-width:15px;}
+</style>
 
 </defs>
 
