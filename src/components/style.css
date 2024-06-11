@@ -4,7 +4,7 @@
   width: 100%;
   position: fixed;
   z-index: 99;
-  color: white;
+  color:white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -27,7 +27,7 @@
 #welcome_container {
   background-color: #fff;
   border: 1px solid #ddd;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px #0000001a;
   padding: 2rem;
   border-radius: 8px;
   margin: 2rem 0;

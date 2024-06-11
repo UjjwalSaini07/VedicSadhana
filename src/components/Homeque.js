@@ -111,6 +111,7 @@ const Homeque = () => {
           <img className="w-full max-w-xl mb-8" src={bgpic} alt="Background" />
           <div className="flex justify-between items-center w-full max-w-xl mb-8">
             <Link
+<<<<<<< Updated upstream
               to={`/api/chapter/${chap}/shlok/${ver - 1}`}
               className="transform rotate-180"
             >
@@ -119,14 +120,31 @@ const Homeque = () => {
                 onClick={handlePrevious}
                 src={icon}
                 alt="Previous"
+=======
+              to={`/api/chapter/${chap}/shlok/${ver - 1}`}>
+              <img
+                className="w-10 h-8 sm:w-10 sm:h-8 opacity-45 hover:opacity-100 duration-300 cursor-pointer rotate-180"
+                onClick={handlePrevious}
+                src={icon}
+                alt="Previous"
+                title="Previous Shlok"
+>>>>>>> Stashed changes
               />
             </Link>
             <Link to={`/api/chapter/${chap}/shlok/${ver + 1}`}>
               <img
+<<<<<<< Updated upstream
                 className="w-8 h-6 sm:w-10 sm:h-8 opacity-20 hover:opacity-50 duration-300 cursor-pointer"
                 onClick={handleNext}
                 src={icon}
                 alt="Next"
+=======
+                className="w-10 h-8 sm:w-10 sm:h-8 opacity-45 hover:opacity-100 duration-300 cursor-pointer"
+                onClick={handleNext}
+                alt="Next"
+                src={icon}
+                title="Next Shlok"
+>>>>>>> Stashed changes
               />
             </Link>
           </div>
