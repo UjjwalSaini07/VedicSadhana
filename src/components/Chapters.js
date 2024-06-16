@@ -92,6 +92,11 @@ const Chapters = () => {
             className="text-[2rem] text-gray-900 font-bold"
             dangerouslySetInnerHTML={textFormatter(Data.meaning.hi)}
           ></p>
+          <hr style={{
+            borderColor:"darkBlue",
+            width:"25vw",
+            opacity:"0.6"
+          }}/>
           <p
             className="text-[1.25rem] text-gray-900"
             dangerouslySetInnerHTML={textFormatter(Data.meaning.en)}
@@ -100,6 +105,11 @@ const Chapters = () => {
             className="text-[1.5rem] text-gray-900 w-[70vw]"
             dangerouslySetInnerHTML={textFormatter(Data.summary.hi)}
           ></p>
+          <hr style={{
+            borderColor:"darkBlue",
+            width:"65vw",
+            opacity:"0.6"
+          }}/>
           <p
             className="text-[1.5rem] text-gray-900 w-[70vw]"
             dangerouslySetInnerHTML={textFormatter(Data.summary.en)}
