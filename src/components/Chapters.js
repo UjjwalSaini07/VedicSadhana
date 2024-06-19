@@ -126,7 +126,7 @@ const Chapters = () => {
             opacity: "0.6",
             height: "25px",  // Corrected the height
             position: "relative",
-            top: "10px"
+            top: "12.6px"
           }} />
 
           <p
