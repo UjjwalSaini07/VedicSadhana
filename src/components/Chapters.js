@@ -103,6 +103,7 @@ const Chapters = () => {
           }} />
           <p
             className="text-[1.25rem] text-gray-900"
+            style={{ marginBottom: "20px" }}
             dangerouslySetInnerHTML={textFormatter(Data.meaning.en)}
           ></p>
           <p
