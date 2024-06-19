@@ -67,31 +67,61 @@ const Chapters = () => {
     <section>
       <h1 className='text-[2rem]'>|| {Data.name} ||</h1>
       <img className='m-auto pt-10 w-[30rem]' src={Krihnabg} alt="Background" />
-      {/* <div className='flex gap-[85rem] absolute'>
-        <Link to={`/api/chapter/${chap}`}>
-          <img className='w-[10rem] h-[8rem] opacity-[20%] hover:opacity-[50%] duration-[0.3s] cursor-pointer rotate-180' onClick={() => {
-            if (chap > 1) {
-              setChap(chap - 1);
-              setVer(1); // Reset the verse to 1 when changing chapters
-            }
-          }} src={icon} alt="icon" />
-        </Link>
-        <Link to={`/api/chapter/${chap}`}>
-          <img className='w-[10rem] h-[8rem] opacity-[20%] hover:opacity-[50%] duration-[0.3s] cursor-pointer' onClick={() => {
-            if (chap < 18) {
-              setChap(chap + 1);
-              setVer(1); // Reset the verse to 1 when changing chapters
-            }
-          }} src={icon} alt="icon" />
 
-        </Link>
-      </div> */}
-      {Data && (
-        <div className="text-center flex flex-col justify-center items-center">
-          <p
+      {/* Adding Arrow For fast Travelling */}
+      <div className="flex justify-content-around items-center p-25">
+        {chap != 1 ? (
+          <Link to={`/api/chapter/${chap-1}`} id="previous" className="transform rotate-180">
+            <img
+              className="w-10 h-8 sm:w-10 sm:h-8 opacity-45 hover:opacity-100 duration-300 cursor-pointer"
+              onClick={changePrevious}
+              src={icon}
+              alt="Previous"
+              title="Previous ChapterSummary"
+            />
+          </Link>
+        ) : (
+          <img
+            className="w-10 h-8 sm:w-10 sm:h-8 opacity-45 cursor-not-allowed"
+            src={icon}
+            alt="Previous"
+            title="Previous ChapterSummary"
+            style={{ opacity: 0.45 }}
+          />
+        )}
+
+        <p
             className="text-[2rem] text-gray-900 font-bold"
             dangerouslySetInnerHTML={textFormatter(Data.meaning.hi)}
-          ></p>
+        ></p>
+
+        {chap != 18 ? (
+          <Link to={`/api/chapter/${parseInt(chap)+1}`} id="next">
+            <img
+              className="w-10 h-8 sm:w-10 sm:h-8 opacity-45 hover:opacity-100 duration-300 cursor-pointer"
+              onClick={changeNext}
+              src={icon}
+              alt="Next"
+              title="Next ChapterSummary"
+            />
+          </Link>
+        ) : (
+          <img
+            className="w-10 h-8 sm:w-10 sm:h-8 opacity-45 cursor-not-allowed"
+            src={icon}
+            alt="Next"
+            title="Next ChapterSummary"
+            style={{ opacity: 0.45 }}
+          />
+        )}
+      </div>
+
+      {Data && (
+        <div className="text-center flex flex-col justify-center items-center">
+          {/* <p
+            className="text-[2rem] text-gray-900 font-bold"
+            dangerouslySetInnerHTML={textFormatter(Data.meaning.hi)}
+          ></p> */}
           {/* Separator of Heading */}
           <hr style={{
               borderColor: "darkBlue",
