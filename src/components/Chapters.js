@@ -93,21 +93,17 @@ const Chapters = () => {
             dangerouslySetInnerHTML={textFormatter(Data.meaning.hi)}
           ></p>
           {/* Separator of Heading */}
-          {/* <hr style={{
-            borderColor:"darkBlue",
-            width:"25vw",
-            opacity:"0.6"
-          }}/> */}
           <hr style={{
               borderColor: "darkBlue",
               width: "20vw",
               opacity: "0.8",
-              height: "1px",  // Adjust the height as needed
+              height: "15px",  // Adjust the height as needed
               position: "relative",
-              top: "-5px"
+              top: "8px"
           }} />
           <p
             className="text-[1.25rem] text-gray-900"
+            style={{ marginBottom: "20px" }}
             dangerouslySetInnerHTML={textFormatter(Data.meaning.en)}
           ></p>
           <p
@@ -115,19 +111,15 @@ const Chapters = () => {
             dangerouslySetInnerHTML={textFormatter(Data.summary.hi)}
           ></p>
           {/* Separator between Hindi And Engish */}
-          {/* <hr style={{
-            borderColor:"darkBlue",
-            width:"65vw",
-            opacity:"0.6"
-          }}/> */}
           <hr style={{
-              borderColor: "darkBlue",
-              width: "65vw",
-              opacity: "0.6",
-              height: "-1px",  // Adjust the height as needed
-              position: "relative",
-              top: "-6px"
+            borderColor: "darkBlue",
+            width: "65vw",
+            opacity: "0.6",
+            height: "25px",  // Corrected the height
+            position: "relative",
+            top: "13px"
           }} />
+
           <p
             className="text-[1.5rem] text-gray-900 w-[70vw]"
             dangerouslySetInnerHTML={textFormatter(Data.summary.en)}
