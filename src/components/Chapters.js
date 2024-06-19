@@ -121,13 +121,13 @@ const Chapters = () => {
             opacity:"0.6"
           }}/> */}
           <hr style={{
-              borderColor: "darkBlue",
-              width: "65vw",
-              opacity: "0.6",
-              height: "-1px",  // Adjust the height as needed
-              position: "relative",
-              top: "-6px"
+            borderColor: "darkBlue",
+            width: "65vw",
+            opacity: "0.6",
+            height: "25px",  // Corrected the height
+            position: "relative",
           }} />
+
           <p
             className="text-[1.5rem] text-gray-900 w-[70vw]"
             dangerouslySetInnerHTML={textFormatter(Data.summary.en)}
