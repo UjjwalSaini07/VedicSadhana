@@ -92,11 +92,20 @@ const Chapters = () => {
             className="text-[2rem] text-gray-900 font-bold"
             dangerouslySetInnerHTML={textFormatter(Data.meaning.hi)}
           ></p>
-          <hr style={{
+          {/* Separator of Heading */}
+          {/* <hr style={{
             borderColor:"darkBlue",
             width:"25vw",
             opacity:"0.6"
-          }}/>
+          }}/> */}
+          <hr style={{
+              borderColor: "darkBlue",
+              width: "20vw",
+              opacity: "0.8",
+              height: "1px",  // Adjust the height as needed
+              position: "relative",
+              top: "-5px"
+          }} />
           <p
             className="text-[1.25rem] text-gray-900"
             dangerouslySetInnerHTML={textFormatter(Data.meaning.en)}
@@ -105,11 +114,20 @@ const Chapters = () => {
             className="text-[1.5rem] text-gray-900 w-[70vw]"
             dangerouslySetInnerHTML={textFormatter(Data.summary.hi)}
           ></p>
-          <hr style={{
+          {/* Separator between Hindi And Engish */}
+          {/* <hr style={{
             borderColor:"darkBlue",
             width:"65vw",
             opacity:"0.6"
-          }}/>
+          }}/> */}
+          <hr style={{
+              borderColor: "darkBlue",
+              width: "65vw",
+              opacity: "0.6",
+              height: "-1px",  // Adjust the height as needed
+              position: "relative",
+              top: "-6px"
+          }} />
           <p
             className="text-[1.5rem] text-gray-900 w-[70vw]"
             dangerouslySetInnerHTML={textFormatter(Data.summary.en)}
