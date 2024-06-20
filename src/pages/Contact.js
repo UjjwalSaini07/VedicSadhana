@@ -42,7 +42,7 @@ const Contact = () => {
         <img id="contact_image" src={krishna} alt='krishna' />
         <div id="Form_container">
           <div className="relative mb-8 flex justify-center items-center">
-            <img data-aos="fade-right" style={{ top: '1.90rem', zIndex: 1 }} className="backdrop-opacity-1 absolute w-[28rem] max-w-full transform -translate-x-1/2" src={logounder} alt="logo" />
+            <img data-aos="fade-right" style={{ top: '1.85rem', zIndex: 1 }} className="backdrop-opacity-10 absolute w-[30rem] max-w-full transform -translate-x-1/2" src={logounder} alt="logo" />
             <p style={{ fontSize: '5rem', color: 'blue', position: 'relative', zIndex: 1 }} className="font-[Alegreya] text-center">VedicVani</p>
           </div>
           <div style={{
