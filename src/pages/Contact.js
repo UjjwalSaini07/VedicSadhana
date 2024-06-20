@@ -28,6 +28,13 @@ const Contact = () => {
     margin: '0 auto',
     backgroundColor: '#fff',
   };
+
+  // Adjust styles for mobile
+  if (isMobile) {
+    formContainerStyle.padding = '2rem'; // Increase padding on mobile
+    formContainerStyle.maxWidth = '550px'; // Adjust max-width for mobile
+    formContainerStyle.maxHeight = '430px'; // Adjust max-height for mobile
+  }
   
   return (
     <section style={{ backgroundColor: '#ff7800', minHeight: '100vh', padding: '2rem' }}>
