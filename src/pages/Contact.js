@@ -53,7 +53,7 @@ const Contact = () => {
             borderRadius: '30px',
             margin: '1.5rem 0',
             marginTop: '1rem',
-            fontSize: '1.5rem',
+            fontSize: '1rem',
             color: '#333',
             maxWidth: isMobile ? '1000%' : 'auto', // Adjusted maxWidth for mobile
             marginLeft: isMobile ? 'auto' : 'unset', // Center align on mobile
@@ -69,7 +69,6 @@ const Contact = () => {
       
       {/* Work On this */}
       <div id="detail_fill_container" className="flex relative justify-center items-center" style={formContainerStyle}>
-        {/* Injecting the provided HTML */}
         <div 
           className="visme_d" 
           data-title="VedicVani_ContactForm" 
@@ -78,7 +77,6 @@ const Contact = () => {
           data-full-page="false" 
           data-min-height="500px" 
           data-form-id="76882"
-          dangerouslySetInnerHTML={{__html: '<!-- Your HTML content here -->'}}
         />
       </div>
     </section>
