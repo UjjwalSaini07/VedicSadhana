@@ -1,4 +1,4 @@
-// // Todo: This is the best change occur and ready for push
+// Todo: Perfect in LocalHost - Previous Code for Navbar before Commit
 // import React, { useState } from 'react';
 // import logounder from "./LogoUnder.png";
 // import { Link, useNavigate } from 'react-router-dom';
@@ -61,7 +61,7 @@
 // export default Navbar;
 
 
-// Todo:Change Done
+// Todo:Best Change Done in Navbar Ready To Push
 // import React, { useState } from 'react';
 // import logounder from './LogoUnder.png';
 // import { Link, useNavigate } from 'react-router-dom';
@@ -77,17 +77,17 @@
 //     return (
 //         <section className='bg-orange-500 shadow-xl h-[4rem] top-0 w-full z-[2] fixed flex justify-between items-center'>
 //             <div className='container mx-auto flex justify-between items-center h-full px-30'>
-//                 <a href="/" className="flex items-center" style={{ marginLeft: '50px' }}>
+//                 <a href="/" className="flex items-center">
 //                     <div className="logo relative flex flex-col items-center">
 //                         <p className="text-2xl font-[Alegreya]">VedicVani</p>
 //                         <img
-//                             className="w-28 h-5.5 mt-auto"
+//                             className="w-28 h-5.5 ml-10 mr-10 mt-auto"
 //                             src={logounder}
 //                             alt="logo"
 //                         />
 //                     </div>
 //                 </a>
-//                 <ul className="hidden md:flex space-x-6">
+//                 <ul className="hidden md:flex space-x-6" style={{ marginRight: '50px' }}>
 //                     <li>
 //                         <Link
 //                             to="/"
@@ -179,7 +179,7 @@
 // export default Navbar;
 
 
-// Todo:Change Done
+// Todo;
 import React, { useState } from 'react';
 import logounder from './LogoUnder.png';
 import { Link, useNavigate } from 'react-router-dom';
@@ -197,9 +197,9 @@ const Navbar = () => {
             <div className='container mx-auto flex justify-between items-center h-full px-30'>
                 <a href="/" className="flex items-center">
                     <div className="logo relative flex flex-col items-center">
-                        <p className="text-2xl font-[Alegreya]">VedicVani</p>
+                        <p className="text-2xl font-[Alegreya] m-0 p-0 leading-none">VedicVani</p>
                         <img
-                            className="w-28 h-5.5 ml-10 mr-10 mt-auto"
+                            className="w-28 h-5.5 mt-0"
                             src={logounder}
                             alt="logo"
                         />
