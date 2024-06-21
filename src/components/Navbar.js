@@ -61,6 +61,7 @@
 // export default Navbar;
 
 
+// Todo:Change Done
 import React, { useState } from 'react';
 import logounder from './LogoUnder.png';
 import { Link, useNavigate } from 'react-router-dom';
@@ -74,16 +75,16 @@ const Navbar = () => {
     }
 
     return (
-        <section className='bg-orange-500 shadow-xl h-[4rem] top-0 w-full z-[2] fixed flex justify-center items-center'>
-            <div className='container mx-auto flex justify-between items-center h-full px-4 mt-4'>
+        <section className='bg-orange-500 shadow-xl h-[4rem] top-0 w-full z-[2] fixed flex justify-between items-center'>
+            <div className='container mx-auto flex justify-between items-center h-full px-4'>
                 <a href="/">
-                    <div className="logo relative">
+                    <div className="logo relative flex items-center">
                         <img
-                            className="backdrop-opacity-1 absolute w-[28rem] max-w-full top-6 left-1/2 transform -translate-x-1/2"
+                            className="w-10 h-10"
                             src={logounder}
                             alt="logo"
                         />
-                        <p className="text-2xl font-[Alegreya] text-center">VedicVani</p>
+                        <p className="text-2xl font-[Alegreya] ml-2">VedicVani</p>
                     </div>
                 </a>
                 <ul className="hidden md:flex space-x-8">
