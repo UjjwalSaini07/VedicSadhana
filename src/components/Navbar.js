@@ -199,7 +199,7 @@ const Navbar = () => {
                     <div className="logo relative flex flex-col items-center">
                         <p className="text-2xl font-[Alegreya]">VedicVani</p>
                         <img
-                            className="w-28 h-5.5 mt-auto"
+                            className="w-28 h-5.5 ml-10 mr-10 mt-auto"
                             src={logounder}
                             alt="logo"
                         />
