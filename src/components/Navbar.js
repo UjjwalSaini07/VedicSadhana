@@ -199,13 +199,13 @@ const Navbar = () => {
                     <div className="logo relative flex flex-col items-center">
                         <p className="text-2xl font-[Alegreya]">VedicVani</p>
                         <img
-                            className="w-28 h-6 mt-0.2"
+                            className="w-28 h-5.5 mt-auto"
                             src={logounder}
                             alt="logo"
                         />
                     </div>
                 </a>
-                <ul className="hidden md:flex space-x-8">
+                <ul className="hidden md:flex space-x-6">
                     <li>
                         <Link
                             to="/"
