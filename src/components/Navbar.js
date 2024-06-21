@@ -76,15 +76,15 @@ const Navbar = () => {
 
     return (
         <section className='bg-orange-500 shadow-xl h-[4rem] top-0 w-full z-[2] fixed flex justify-between items-center'>
-            <div className='container mx-auto flex justify-between items-center h-full px-4'>
+            <div className='container mx-auto flex justify-between items-center h-full px-30 '>
                 <a href="/">
                     <div className="logo relative flex items-center">
                         <img
-                            className="w-10 h-10"
+                            className="w-28 h-10"
                             src={logounder}
                             alt="logo"
                         />
-                        <p className="text-2xl font-[Alegreya] ml-2">VedicVani</p>
+                        <p className="text-2xl font-[Alegreya] ml-2.5">VedicVani</p>
                     </div>
                 </a>
                 <ul className="hidden md:flex space-x-8">
