@@ -15,10 +15,12 @@ const Navbar = () => {
         <section className='bg-orange-500 shadow-xl h-[4rem] top-0 w-full z-[2] fixed flex justify-between items-center'>
             <div className='container mx-auto flex justify-between items-center h-full px-30'>
                 <a href="/" className="flex items-center">
-                    <div className="logo relative flex flex-col items-center">
-                        <p className="text-2xl font-[Alegreya] m-0 p-0 leading-none">VedicVani</p>
+                    <div className="logo relative flex flex-col items-center mt-2.5"> {/* Adjusted margin-top */}
+                        <p className="text-2xl font-[Alegreya] m-0 p-0 leading-none mb-[-4rem]"> {/* Adjusted margin-bottom */}
+                            VedicVani
+                        </p>
                         <img
-                            className="w-28 h-5.5 mt-0 ml-8 mr-8"
+                            className="w-28 h-6 ml-9 mr-9"
                             src={logounder}
                             alt="logo"
                         />
