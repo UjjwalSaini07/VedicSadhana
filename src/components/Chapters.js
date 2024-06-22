@@ -118,10 +118,6 @@ const Chapters = () => {
 
       {Data && (
         <div className="text-center flex flex-col justify-center items-center">
-          {/* <p
-            className="text-[2rem] text-gray-900 font-bold"
-            dangerouslySetInnerHTML={textFormatter(Data.meaning.hi)}
-          ></p> */}
           {/* Separator of Heading */}
           <hr style={{
               borderColor: "darkBlue",
