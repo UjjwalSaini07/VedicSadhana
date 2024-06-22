@@ -9,6 +9,7 @@ import Chapters from "./components/Chapters";
 import "./App.css";
 import Resources from "./components/Resources";
 import AboutUs from "./components/AboutUs";
+import Chronicle from './components/Chronicle';
 import AppLayout from "./components/AppLayout";
 import Preloader from "./components/Preloader.js";
 import 'aos/dist/aos.css';
@@ -32,6 +33,7 @@ const App = () => {
             <Route path="/api/resources" element={<Resources />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/api/aboutus" element={<AboutUs />} />
+            <Route path='/chronicle' element={<Chronicle/>}/>
           </Route>
           <Route path="*" element={<h1>404 Not Found</h1>} />
         </Routes>
