@@ -139,7 +139,7 @@ const Navbar = () => {
                             VedicVani
                         </p>
                         <img
-                            className="w-28 h-6" // Removed margin-top
+                            className="w-28 h-6 ml-9 mr-9" // Removed margin-top
                             src={logounder}
                             alt="logo"
                         />
