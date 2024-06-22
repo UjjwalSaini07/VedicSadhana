@@ -1,4 +1,12 @@
 import React from 'react';
+import Puranas from "./Resource_Image/Puranas.jpg";
+import Brahmanas from "./Resource_Image/Brahmanas.jpg";
+import GarudaPuran from "./Resource_Image/GarudaPuran.jpg";
+import MatsyaPuran from "./Resource_Image/MatsyaPuran.jpg";
+import ShivaPurana from "./Resource_Image/ShivaPurana.jpg";
+import AgniPurana from "./Resource_Image/The Agni-Purana.jpg";
+import Vedangas from "./Resource_Image/Vedangas.jpg";
+
 
 const books = [
     {
@@ -26,8 +34,36 @@ const books = [
         image: 'https://i.pinimg.com/564x/05/80/82/05808240b9a7581f9fb175725f86ccce.jpg'
     },
     {
-        name: 'The Puranas',
+        name: 'The Vishnu Puranas',
         image: 'https://i.pinimg.com/236x/f4/38/a0/f438a019288e762948e4e648da8d6805.jpg'
+    },
+    {
+        name: 'The Puranas',
+        image: Puranas
+    },
+    {
+        name: 'The Brahmanas',
+        image: Brahmanas
+    },
+    {
+        name: 'GarudaPuran',
+        image: GarudaPuran
+    },
+    {
+        name: 'MatsyaPuran',
+        image: MatsyaPuran
+    },
+    {
+        name: 'The ShivaPurana',
+        image: ShivaPurana
+    },
+    {
+        name: 'The AgniPurana',
+        image: AgniPurana
+    },
+    {
+        name: 'Vedangas',
+        image: Vedangas
     },
 ];
 
