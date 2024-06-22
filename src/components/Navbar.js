@@ -45,6 +45,14 @@ const Navbar = () => {
                     </li>
                     <li>
                         <Link
+                            to="/api/chronicle"
+                            className="text-[1rem] text-gray-900 font-bold text-decoration-none hover:text-blue-400"
+                        >
+                            Chronicles
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
                             to="/api/aboutus"
                             className="text-[1rem] text-gray-900 font-bold text-decoration-none hover:text-blue-400"
                         >
@@ -94,6 +102,13 @@ const Navbar = () => {
                         onClick={() => setMenuOpen(false)}
                     >
                         Resources
+                    </Link>
+                    <Link
+                        to="/api/chronicle"
+                        className="text-[1.5rem] text-white font-bold hover:text-yellow-300 transition duration-300"
+                        onClick={() => setMenuOpen(false)}
+                    >
+                        Chronicles
                     </Link>
                     <Link
                         to="/api/aboutus"
