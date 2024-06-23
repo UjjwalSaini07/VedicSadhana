@@ -7,6 +7,31 @@ Explore the timeless wisdom of the Bhagavad Gita with in-depth shlokas, translat
 - just Download This Data In Your computer and Put It Inside `/Data/bhagavad-gita-data` this Folder
 - Special Thanx to - https://github.com/PtPrashantTripathi
 
+# Github Stats:
+
+<div align = "center">
+
+<table align="center">
+    <thead align="center">
+        <tr border: 1px;>
+            <td><b>🌟 Stars</b></td>
+            <td><b>🍴 Forks</b></td>
+            <td><b>🐛 Issues</b></td>
+            <td><b>🔔 Open PRs</b></td>
+            <td><b>🔕 Close PRs</b></td>
+        </tr>
+     </thead>
+    <tbody>
+         <tr>
+            <td><img alt="Stars" src="https://img.shields.io/github/stars/UjjwalSaini07/VedicSadhana?style=flat&logo=github"/></td>
+             <td><img alt="Forks" src="https://img.shields.io/github/forks/UjjwalSaini07/VedicSadhana?style=flat&logo=github"/></td>
+            <td><img alt="Issues" src="https://img.shields.io/github/issues/UjjwalSaini07/VedicSadhana?style=flat&logo=github"/></td>
+            <td><img alt="Open Pull Requests" src="https://img.shields.io/github/issues-pr/UjjwalSaini07/VedicSadhana?style=flat&logo=github"/></td>
+           <td><img alt="Close Pull Requests" src="https://img.shields.io/github/issues-pr-closed/UjjwalSaini07/VedicSadhana?style=flat&color=critical&logo=github"/></td>
+        </tr>
+    </tbody>
+</table>
+</div>
 
 ## API Reference
 
