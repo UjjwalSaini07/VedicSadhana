@@ -33,7 +33,7 @@ const App = () => {
             <Route path="/api/resources" element={<Resources />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/api/aboutus" element={<AboutUs />} />
-            <Route path='/chronicle' element={<Chronicle/>}/>
+            <Route path='/api/chronicle' element={<Chronicle/>}/>
           </Route>
           <Route path="*" element={<h1>404 Not Found</h1>} />
         </Routes>
