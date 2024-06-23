@@ -2,11 +2,6 @@
 # Bhagavad Gita Explorer
 Explore the timeless wisdom of the Bhagavad Gita with in-depth shlokas, translations, and commentaries, connecting you to India's rich spiritual heritage.
 
-# Data source:
-- Data For This Project is Get From https://github.com/vedicscriptures/bhagavad-gita-data this repository.
-- just Download This Data In Your computer and Put It Inside `/Data/bhagavad-gita-data` this Folder
-- Special Thanx to - https://github.com/PtPrashantTripathi
-
 # Github Stats:
 
 <div align = "center">
@@ -32,6 +27,11 @@ Explore the timeless wisdom of the Bhagavad Gita with in-depth shlokas, translat
     </tbody>
 </table>
 </div>
+
+# Data source:
+- Data For This Project is Get From https://github.com/vedicscriptures/bhagavad-gita-data this repository.
+- just Download This Data In Your computer and Put It Inside `/Data/bhagavad-gita-data` this Folder
+- Special Thanx to - https://github.com/PtPrashantTripathi
 
 ## API Reference
 
