@@ -26,7 +26,7 @@ const Chronicle = () => {
                 src={song}
                 autoPlay
                 loop
-                volume={0.5}
+                volume={0.25}
                 style={{ display: 'none' }} // Hide the audio player
             />
             <div className="flex flex-wrap justify-center items-center p-5">
