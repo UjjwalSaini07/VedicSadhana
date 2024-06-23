@@ -11,6 +11,7 @@
     "framer-motion": "^11.2.10",
     "react": "^18.2.0",
     "react-audio-play": "^1.0.2",
+    "react-audio-player": "^0.17.0",
     "react-bootstrap": "^2.9.1",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.23.1",
