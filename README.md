@@ -78,8 +78,9 @@ Once both the backend and frontend servers are running, you can access the appli
 
 Contributions are always welcome!
 
-- Fork the repository.
+- Fork the repository and Star it.
 - Create a new branch:
+- For each and every change create new branch with respective number.
 - Make your changes and commit on the pull request.
 - Push to the branch
 ```bash
@@ -99,5 +100,5 @@ To run tests, run the following command
 
 ## Feedback
 
-If you have any feedback, please reach out to us at ujjwalsaini0007@gmail.com
+If you have any feedback, please reach out to us at ujjwalsaini0007+Vedicgit@gmail.com
 
