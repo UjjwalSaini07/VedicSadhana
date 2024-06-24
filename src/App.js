@@ -8,7 +8,9 @@ import Snowfall from "react-snowfall";
 import Chapters from "./components/Chapters";
 import "./App.css";
 import Resources from "./components/Resources";
-import AboutUs from "./components/AboutUs";
+import AboutUs from "./components/AboutUs.js";
+import MahabharatCarousel from "./components/Mahabharat_carousel.js";
+import RamayanaCarousel from "./components/Ramayana_carousel";
 import Chronicle from './components/Chronicle';
 import AppLayout from "./components/AppLayout";
 import Preloader from "./components/Preloader.js";
@@ -33,6 +35,8 @@ const App = () => {
             <Route path="/api/resources" element={<Resources />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/api/aboutus" element={<AboutUs />} />
+            <Route path="/api/Mahabharat_carousel" element={<MahabharatCarousel />} />
+            <Route path="/api/Ramayana_carousel" element={<RamayanaCarousel />} />
             <Route path='/api/chronicle' element={<Chronicle/>}/>
           </Route>
           <Route path="*" element={<h1>404 Not Found</h1>} />
