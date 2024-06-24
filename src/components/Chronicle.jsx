@@ -1,4 +1,3 @@
-// Todo: Temporary Changes Only For checking audio player
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ReactAudioPlayer from 'react-audio-player';
@@ -10,12 +9,12 @@ const slideCover = [
     {
         name: 'The Ramayana',
         image: Ramayana,
-        route: '/Ramayana_carousel' // Route to Ramayana carousel component
+        route: '/api/Ramayana_carousel' // Route to Ramayana carousel component
     },
     {
         name: 'The Mahabharata',
         image: Mahabharat,
-        route: '/Mahabharat_carousel' // Route to Mahabharata carousel component
+        route: '/api/Mahabharat_carousel' // Route to Mahabharata carousel component
     },
 ];
 
