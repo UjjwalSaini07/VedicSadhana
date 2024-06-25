@@ -280,7 +280,7 @@ const Chapters = () => {
           ></p>
 
           {/* Buttons for Read Aloud (Mobile Only) */}
-          <div className="text-center mb-2 mt-3 block md:hidden"> {/* Hide on medium screens and larger */}
+          <div className="text-center mb-1 mt-3 block md:hidden"> {/* Hide on medium screens and larger */}
             <button type="button" className="w-[12rem] btn btn-primary" onClick={() => handleSpeech(Data.summary.en, 'en')}>
               {isSpeakingEn ? 'Stop Reading English' : 'Read Aloud English'}
             </button>
