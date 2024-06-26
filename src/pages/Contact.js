@@ -32,7 +32,7 @@ const Contact = () => {
   if (isMobile) {
     formContainerStyle.padding = '2rem'; // Increase padding on mobile
     formContainerStyle.maxWidth = '530px'; // Adjust max-width for mobile
-    formContainerStyle.maxHeight = '600px'; // Adjust max-height for mobile
+    formContainerStyle.maxHeight = '540px'; // Adjust max-height for mobile
   }
 
   return (
