@@ -37,7 +37,7 @@ Explore the timeless wisdom of the Bhagavad Gita with in-depth shlokas, translat
 
 #### Bhagavad Gita API
 
-```http
+```bash
   https://bhagavadgitaapi.in/
 ```
 
