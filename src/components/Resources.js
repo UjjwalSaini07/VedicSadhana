@@ -77,10 +77,6 @@ const Resources = () => {
                 <div key={index} className="bg-white rounded-xl shadow-lg m-4 w-72 h-[500px] overflow-hidden transform hover:scale-105 transition-transform duration-300 hover:shadow-2xl">
                     <img className="w-full h-72 object-contain object-center " src={book.image} alt={book.name} />
                     <div className="p-6 text-center">
-                        {/* 
-                        <h2 className="text-xl font-bold text-gray-800 mb-2">{book.name}</h2>
-                        <p className="text-gray-600">Explore the depth and wisdom of the {book.name}</p> */}
-
                         <h2 className="text-xl font-bold text-gray-800 mb-2">{book.name}</h2>
                         {(book.name === 'The Bhagavad Gita' || book.name === 'The Upanishads' || book.name === 'The Puranas' || book.name === 'The ShivaPurana') && (
                             <p className="text-gray-600">Discover the deep insights and timeless wisdom of the {book.name}.</p>
