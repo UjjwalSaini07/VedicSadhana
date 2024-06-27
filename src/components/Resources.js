@@ -1,4 +1,6 @@
 import React from 'react';
+
+// Importing Required Images
 import Bhagvat_Gita from "./Resource_Image/Bhagvat_Gita.png";
 import Holy_Veda from "./Resource_Image/Holy_Veda.png";
 import Ramayana from "./Resource_Image/Ramayana.png";
@@ -9,7 +11,6 @@ import MatsyaPuran from "./Resource_Image/MatsyaPuran.jpg";
 import ShivaPurana from "./Resource_Image/ShivaPurana.jpg";
 import AgniPurana from "./Resource_Image/The Agni-Purana.jpg";
 import Vedangas from "./Resource_Image/Vedangas.jpg";
-
 
 const books = [
     {
