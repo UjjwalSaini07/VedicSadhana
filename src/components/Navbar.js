@@ -1,4 +1,3 @@
-// Todo: Best Change Done in Navbar Ready To Push
 import React, { useState } from 'react';
 import logounder from './LogoUnder.png';
 import { Link, useNavigate } from 'react-router-dom';
@@ -20,7 +19,7 @@ const Navbar = () => {
                             VedicVani
                         </p>
                         <img
-                            className="w-28 h-6 ml-9 mr-9"
+                            className="w-28 h-6 ml-4 mr-3 sm:ml-9 sm:mr-9"
                             src={logounder}
                             alt="logo"
                         />
