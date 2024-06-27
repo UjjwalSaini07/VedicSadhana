@@ -25,13 +25,18 @@ const Contact = () => {
     maxHeight: '750px', // Default max-height for PC
     margin: '0 auto',
     backgroundColor: '#fff',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '100%', // Ensure the container takes the full height of its parent
   };
 
   // Adjust styles for mobile
   if (isMobile) {
-    formContainerStyle.padding = '2rem'; // Increase padding on mobile
+    formContainerStyle.padding = '1rem 1rem 7.5rem';
     formContainerStyle.maxWidth = '530px'; // Adjust max-width for mobile
-    formContainerStyle.maxHeight = '540px'; // Adjust max-height for mobile
+    formContainerStyle.maxHeight = '500px'; // Adjust max-height for mobile
+    formContainerStyle.height = '90vh'; // Ensure the container takes the full height of the viewport on mobile
   }
 
   const pContainerStyle = {
@@ -60,7 +65,7 @@ const Contact = () => {
     margin: '0 auto',
     backgroundColor: '#fff',
     marginBottom: '2rem', // Add space between containers
-    marginTop: '-4rem' 
+    marginTop: '-4rem'
   };
 
   return (
@@ -68,7 +73,7 @@ const Contact = () => {
       <div id="detail_fill_container" className="flex justify-center items-center">
         <img id="contact_image" src={krishna} alt='krishna' />
         <div id="Form_container">
-          <div className="relative mb-2.5 flex justify-center items-center">
+          <div className="relative mb-3 flex justify-center items-center">
             <img data-aos="fade-right" style={{ top: isMobile ? '2rem' : '1.5rem', zIndex: 1 }} className="backdrop-opacity-15 absolute w-[25rem] max-w-full transform -translate-x-1/2" src={logounder} alt="logo" />
             <p style={{ fontSize: isMobile ? '4rem' : '5rem', color: 'blue', position: 'relative', zIndex: 1 }} className="font-[Alegreya] text-center">VedicVani</p>
           </div>
@@ -89,22 +94,22 @@ const Contact = () => {
       {/* Form container */}
       <div id="detail_fill_container" className="flex relative justify-center items-center" style={formContainerStyle}>
         {!isMobile ? (
-          <div 
-            className="visme_d" 
-            data-title="VedicVani_ContactForm" 
-            data-url="epqw3qmv-vedicvani-contactform" 
-            data-domain="forms" 
-            data-full-page="false" 
-            data-min-height="450px" 
+          <div
+            className="visme_d"
+            data-title="VedicVani_ContactForm"
+            data-url="epqw3qmv-vedicvani-contactform"
+            data-domain="forms"
+            data-full-page="false"
+            data-min-height="450px"
             data-form-id="76882"
           />
         ) : (
-          <div 
-            className="visme_d" 
-            data-title="VedicVani_ContactForm" 
-            data-url="epqw3qmv-vedicvani-contactform?sidebar=true" 
-            data-domain="forms" 
-            data-full-page="false" 
+          <div
+            className="visme_d"
+            data-title="VedicVani_ContactForm"
+            data-url="epqw3qmv-vedicvani-contactform?sidebar=true"
+            data-domain="forms"
+            data-full-page="false"
             data-min-height="600px" 
             data-form-id="76882"
           />
