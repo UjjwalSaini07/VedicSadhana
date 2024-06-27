@@ -1,4 +1,7 @@
 import React from 'react';
+import Bhagvat_Gita from "./Resource_Image/Bhagvat_Gita.png";
+import Holy_Veda from "./Resource_Image/Holy_Veda.png";
+import Ramayana from "./Resource_Image/Ramayana.png";
 import Puranas from "./Resource_Image/Puranas.jpg";
 import Brahmanas from "./Resource_Image/Brahmanas.jpg";
 import GarudaPuran from "./Resource_Image/GarudaPuran.jpg";
@@ -11,15 +14,15 @@ import Vedangas from "./Resource_Image/Vedangas.jpg";
 const books = [
     {
         name: 'The Bhagavad Gita',
-        image: 'https://i.pinimg.com/736x/de/80/21/de80218401a2e168a697ac4f6ddf2507.jpg'
+        image: Bhagvat_Gita
     },
     {
         name: 'The Ramayana',
-        image: 'https://i.pinimg.com/564x/66/dd/c4/66ddc40d895208649668f74df692de0e.jpg'
+        image: Ramayana
     },
     {
         name: 'The Holy Vedas',
-        image: 'https://i.pinimg.com/564x/59/7b/69/597b699950665213b36f0fe4ff3c3ba0.jpg'
+        image: Holy_Veda
     },
     {
         name: 'The Upanishads',
@@ -73,9 +76,24 @@ const Resources = () => {
             {books.map((book, index) => (
                 <div key={index} className="bg-white rounded-xl shadow-lg m-4 w-72 h-[500px] overflow-hidden transform hover:scale-105 transition-transform duration-300 hover:shadow-2xl">
                     <img className="w-full h-72 object-contain object-center " src={book.image} alt={book.name} />
-                    <div className="p-5 text-center">
+                    <div className="p-6 text-center">
+                        {/* 
                         <h2 className="text-xl font-bold text-gray-800 mb-2">{book.name}</h2>
-                        <p className="text-gray-600">Explore the depth and wisdom of the {book.name}</p>
+                        <p className="text-gray-600">Explore the depth and wisdom of the {book.name}</p> */}
+
+                        <h2 className="text-xl font-bold text-gray-800 mb-2">{book.name}</h2>
+                        {(book.name === 'The Bhagavad Gita' || book.name === 'The Upanishads' || book.name === 'The Puranas' || book.name === 'The ShivaPurana') && (
+                            <p className="text-gray-600">Discover the deep insights and timeless wisdom of the {book.name}.</p>
+                        )}
+                        {(book.name === 'The Ramayana' || (book.name === 'The Vishnu Puranas') || (book.name === 'The Brahmanas') || (book.name === 'The AgniPurana')) && (
+                            <p className="text-gray-600">Explore the profound insights and ancient wisdom contained in the {book.name}.</p>
+                        )}
+                        {(book.name === 'The Mahabharata' || (book.name === 'GarudaPuran') || (book.name === 'Vedangas')) && (
+                            <p className="text-gray-600">Immerse yourself in the profound knowledge and timeless teachings of the {book.name}.</p>
+                        )}
+                        {(book.name === 'The Holy Vedas' || (book.name === 'Kalki (Avatar of Vishnu)') || (book.name === 'MatsyaPuran')) && (
+                            <p className="text-gray-600">Delve into the depth and timeless wisdom found within the {book.name}.</p>
+                        )}
                     </div>
                 </div>
             ))}
