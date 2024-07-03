@@ -1,11 +1,13 @@
-import { Link } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
 import React from 'react';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ReactAudioPlayer from 'react-audio-player';
 import { Typewriter } from 'react-simple-typewriter';
+import { FaHome } from 'react-icons/fa';
 import Flute3 from './Flute3.mp3';
+import chronicle from './Chronicle';
 
 // Adding Images
 import Image1 from "./Carousel_Images/Mahabharat/_0MahaBharat.png";
@@ -166,8 +168,6 @@ const Mahabharatcarousel = () => {
     { src: Image113, alt: "Image 113" }, { src: Image114, alt: "Image 114" }, { src: Image115, alt: "Image 115" }, { src: Image116, alt: "Image 116" },
     { src: Image117, alt: "Image 117" }, { src: Image118, alt: "Image 118" }, { src: Image119, alt: "Image 119" }, { src: Image120, alt: "Image 120" },
     { src: Image121, alt: "Image 121" }, { src: Image122, alt: "Image 122" }, { src: Image123, alt: "Image 123" }, { src: Image124, alt: "Image 124" },
-    
-    
   ];
 
   const settings = {
@@ -193,6 +193,7 @@ const Mahabharatcarousel = () => {
             background-color: #f97316;
             padding: 50px 10px;
             text-align: center;
+            position: relative;
           }
           .mahabharat-carousel h1 {
             text-transform: uppercase;
@@ -243,6 +244,38 @@ const Mahabharatcarousel = () => {
             font-size: 40px;
             color: #fff;
           }
+          .innovative-button {
+            position: absolute;
+            top: 8px;
+            right: 10px;
+            padding: 1px 8px;
+            background-color: #fff;
+            color: #f97316;
+            border: 1.5px solid #f97316;
+            border-radius: 25px;
+            text-transform: uppercase;
+            font-size: 1rem;
+            font-weight: 650;
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+            z-index: 1;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          }
+          .innovative-button:hover {
+            background-color: #f97316;
+            color: #fff;
+            transform: scale(1.1);
+          }
+          .home-icon {
+            display: none;
+            position: absolute;
+            top: 10px;
+            right: 12px;
+            font-size: 1.5rem;
+            color: #fff;
+            z-index: 1;
+          }
+
           @media (max-width: 992px) {
             .mahabharat-carousel .slider-container {
               max-width: 60%;
@@ -294,10 +327,21 @@ const Mahabharatcarousel = () => {
             .slick-prev:before, .slick-next:before {
               font-size: 22px;
             }
+            .innovative-button {
+              display: none;
+            }
+            .home-icon {
+              display: block;
+              z-index: 1;
+            }
           }
         `}
       </style>
       <div className="mahabharat-carousel">
+        <Link to='/api/chronicle' className="innovative-button">Chronicles</Link>
+        <Link to='/api/chronicle' className="home-icon">
+          <FaHome />
+        </Link>
         <h1>
           <Typewriter
             words={['The Mahabharata']}
@@ -355,5 +399,8 @@ const CustomNextArrow = (props) => {
   );
 };
 
-export default Mahabharatcarousel;
+const Chronicle = () => {
+  return <div>Chronicle Page</div>;
+};
 
+export default Mahabharatcarousel;
