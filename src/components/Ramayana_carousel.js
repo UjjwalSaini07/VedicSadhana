@@ -101,19 +101,19 @@ const RamayanaCarousel = () => {
           }
           .innovative-button {
             position: absolute;
-            top: 10px;
-            right: 12px;
-            padding: 3px 6px;
+            top: 8px;
+            right: 10px;
+            padding: 1px 8px;
             background-color: #fff;
             color: #f97316;
-            border: 2px solid #f97316;
-            border-radius: 26px;
+            border: 1.5px solid #f97316;
+            border-radius: 25px;
             text-transform: uppercase;
             font-size: 1rem;
-            font-weight: 700;
+            font-weight: 650;
             text-decoration: none;
             transition: all 0.3s ease-in-out;
-            z-index: 10;
+            z-index: 1;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
           }
           .innovative-button:hover {
@@ -128,7 +128,7 @@ const RamayanaCarousel = () => {
             right: 12px;
             font-size: 1.5rem;
             color: #fff;
-            z-index: 10;
+            z-index: 1;
           }
           @media (max-width: 992px) {
             .ramayana-carousel .slider-container {
@@ -192,7 +192,7 @@ const RamayanaCarousel = () => {
         `}
       </style>
       <div className="ramayana-carousel">
-        <Link to='/api/chronicle' className="innovative-button">Chronicle</Link>
+        <Link to='/api/chronicle' className="innovative-button">Chronicles</Link>
         <Link to='/api/chronicle' className="home-icon">
           <FaHome />
         </Link>
