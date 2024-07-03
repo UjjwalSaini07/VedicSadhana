@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ReactAudioPlayer from 'react-audio-player';
 import { Typewriter } from 'react-simple-typewriter';
-import { FaHome } from 'react-icons/fa'; // Import FaHome for home icon
+import { FaHome } from 'react-icons/fa';
 import Flute4 from './Flute4.mp3';
 import chronicle from './Chronicle';
 
