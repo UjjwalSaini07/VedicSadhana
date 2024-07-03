@@ -6,10 +6,9 @@ import { Link, useLocation } from "react-router-dom";
 import AudioRead from "./AudioRead";
 
 const Homeque = () => {
-  // setting speech
   const speech = useRef(new SpeechSynthesisUtterance()).current;
-  const voices = window.speechSynthesis.getVoices()
-  speech.voice = voices[10]//setting default voice
+  const voices = window.speechSynthesis.getVoices();
+  speech.voice = voices[10]; // setting default voice
 
   const location = useLocation();
   const [chap, setChap] = useState(1);
@@ -65,8 +64,17 @@ const Homeque = () => {
       console.error("An error occurred while fetching data", error);
     } finally {
       setLoading(false);
-
     }
+  };
+
+  useEffect(() => {
+    // Alert on component load
+    showVolumeAlert();
+  }, [0]); // Empty dependency array ensures this effect runs only once on mount
+
+  const showVolumeAlert = () => {
+    const alertMessage = "Mind It : Double Click on the Volume Icon to Change the Respective Audio";
+    alert(alertMessage);
   };
 
   const textFormatter = (text) => {
@@ -77,6 +85,7 @@ const Homeque = () => {
       </span>
     ));
   };
+
   const handleNext = () => {
     if (ver < 47) {
       setVer(ver + 1);
@@ -133,15 +142,15 @@ const Homeque = () => {
           </div>
           <div className="text-center w-full">
             <h1 className="text-lg sm:text-xl md:text-2xl font-semibold mb-4">
-              <AudioRead slok={slok} speech={speech}/>{textFormatter(slok)}
+              <AudioRead slok={slok} speech={speech} />{textFormatter(slok)}
             </h1>
             <p className="text-base sm:text-lg mb-4">
-            <AudioRead slok={transliteration} speech={speech}/>{textFormatter(transliteration)}
+              <AudioRead slok={transliteration} speech={speech} />{textFormatter(transliteration)}
             </p>
             <p className="text-lg sm:text-xl md:text-2xl mb-4">
-            <AudioRead slok={slokHindi} speech={speech}/>{textFormatter(slokHindi)}
+              <AudioRead slok={slokHindi} speech={speech} />{textFormatter(slokHindi)}
             </p>
-            <p className="text-base sm:text-lg"><AudioRead slok={slokEnglish} speech={speech}/>{textFormatter(slokEnglish)}</p>
+            <p className="text-base sm:text-lg"><AudioRead slok={slokEnglish} speech={speech} />{textFormatter(slokEnglish)}</p>
           </div>
         </>
       )}

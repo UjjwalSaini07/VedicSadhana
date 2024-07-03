@@ -1,4 +1,3 @@
-//Todo: Prefect Change
 import React, { useRef, useState, useEffect } from 'react';
 
 export default function AudioRead({ slok, speech }) {
