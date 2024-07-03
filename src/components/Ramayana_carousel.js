@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ReactAudioPlayer from 'react-audio-player';
 import { Typewriter } from 'react-simple-typewriter';
-import Flute3 from './Flute4.mp3';
+import Flute4 from './Flute4.mp3';
 
 // Adding Images
 import Image0 from "./Carousel_Images/Ramyana/_Logo.png";
@@ -104,6 +104,12 @@ const RamayanaCarousel = () => {
             }
           }
           @media (max-width: 768px) {
+            .ramayana-carousel {
+              padding: 30px 10px;
+              height: 45rem;
+              text-align: center;
+              //#ff9400; //Only For Emergency
+            }
             .ramayana-carousel .slider-container {
               max-width: 80%;
             }
@@ -166,7 +172,7 @@ const RamayanaCarousel = () => {
           </Slider>
         </div>
         <ReactAudioPlayer
-          src={Flute3}
+          src={Flute4}
           autoPlay
           loop
           volume={0.2}

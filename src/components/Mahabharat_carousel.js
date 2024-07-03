@@ -255,6 +255,11 @@ const Mahabharatcarousel = () => {
             }
           }
           @media (max-width: 768px) {
+            .mahabharat-carousel {
+              padding: 40px 10px;
+              height: 46rem;
+              text-align: center;
+            }
             .mahabharat-carousel .slider-container {
               max-width: 80%;
             }
