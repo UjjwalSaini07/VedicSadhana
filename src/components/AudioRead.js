@@ -1,56 +1,82 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState, useEffect } from 'react';
 
-export default function AudioRead({ slok ,speech}) {
-
+export default function AudioRead({ slok, speech }) {
     const [speakSloke, setspeakSloke] = useState(true);
     const [togglebtn, settogglebtn] = useState(false);
-    const select = useRef();
-
-    // const speech = useRef(new SpeechSynthesisUtterance()).current;
+    const selectRef = useRef(null);
 
     const readAloud = () => {
         if (speakSloke) {
             speech.text = slok;
-            window.speechSynthesis.speak(speech)
+            window.speechSynthesis.speak(speech);
+        } else {
+            window.speechSynthesis.cancel();
         }
-        else {
-            const synth = window.speechSynthesis;
-            synth.cancel()
-        }
-    }
+    };
 
-    const readAloudToggle = () => {
-        setspeakSloke(!speakSloke)
-        readAloud();
-    }
-    
     const changeVoice = (event) => {
-        const voices = window.speechSynthesis.getVoices()
-        speech.voice = voices[event.target.value];
-    }
+        const selectedVoice = window.speechSynthesis.getVoices()[event.target.value];
+        speech.voice = selectedVoice;
+        readAloud();
+        settogglebtn(false); // Switch back to button view
+    };
 
     const replaceBtnWithSelect = () => {
-        settogglebtn(!togglebtn)
-        const voices = window.speechSynthesis.getVoices()
-        setTimeout(() => {
-            voices.forEach((voice, index) => {
-                const opt = document.createElement('option')
-                opt.text = voice.name;
-                opt.value = index;
-                select.current.appendChild(opt);
-            })
-        }, 0);
-    }
+        settogglebtn(true); // Switch to select dropdown
+    };
+
     const replaceSelectWithBtn = () => {
-        settogglebtn(!togglebtn)
-    }
+        settogglebtn(false); // Switch back to button view
+    };
+
+    const handleBlur = () => {
+        settogglebtn(false); // Switch back to button view on blur
+    };
+
+    useEffect(() => {
+        // Initialize voices when component mounts
+        const voices = window.speechSynthesis.getVoices();
+        if (voices.length === 0) {
+            // Wait until voices are loaded
+            window.speechSynthesis.onvoiceschanged = () => {
+                const updatedVoices = window.speechSynthesis.getVoices();
+                populateVoices(updatedVoices);
+            };
+        } else {
+            populateVoices(voices);
+        }
+    }, []);
+
+    const populateVoices = (voices) => {
+        if (selectRef.current) {
+            selectRef.current.innerHTML = ''; // Clear existing options
+            voices.forEach((voice, index) => {
+                const option = document.createElement('option');
+                option.text = voice.name;
+                option.value = index;
+                selectRef.current.appendChild(option);
+            });
+        }
+    };
+
+    const toggleReadAloud = () => {
+        setspeakSloke(!speakSloke);
+        readAloud();
+    };
 
     return (
         <>
-            {!togglebtn ? <button className="AudioReadbtn" onClick={readAloudToggle} onDoubleClick={replaceBtnWithSelect}>
-                <i className="fa-solid fa-volume-high"></i>
-            </button> :
-                <select className='select-voice' ref={select} onChange={changeVoice} onDoubleClick={replaceSelectWithBtn}></select>}
+            {!togglebtn ? (
+                <button className="AudioReadbtn" onClick={toggleReadAloud} onDoubleClick={replaceBtnWithSelect}>
+                    <i className="fa-solid fa-volume-high"></i>
+                </button>
+            ) : (
+                <select className='select-voice' ref={selectRef} onChange={changeVoice} onBlur={handleBlur}>
+                    {window.speechSynthesis.getVoices().map((voice, index) => (
+                        <option key={index} value={index}>{voice.name}</option>
+                    ))}
+                </select>
+            )}
         </>
-    )
+    );
 }
