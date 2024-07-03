@@ -168,8 +168,6 @@ const Mahabharatcarousel = () => {
     { src: Image113, alt: "Image 113" }, { src: Image114, alt: "Image 114" }, { src: Image115, alt: "Image 115" }, { src: Image116, alt: "Image 116" },
     { src: Image117, alt: "Image 117" }, { src: Image118, alt: "Image 118" }, { src: Image119, alt: "Image 119" }, { src: Image120, alt: "Image 120" },
     { src: Image121, alt: "Image 121" }, { src: Image122, alt: "Image 122" }, { src: Image123, alt: "Image 123" }, { src: Image124, alt: "Image 124" },
-    
-    
   ];
 
   const settings = {
