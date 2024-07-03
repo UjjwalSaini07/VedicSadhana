@@ -107,6 +107,7 @@ const RamayanaCarousel = () => {
             .ramayana-carousel {
               // background-color: #ff9400; //Only For Emergency
               padding: 15px 15px;
+              height: auto;
             }
             .ramayana-carousel .slider-container {
               max-width: 80%;
