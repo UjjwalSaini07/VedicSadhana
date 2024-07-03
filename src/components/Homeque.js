@@ -6,35 +6,38 @@ import { Link, useLocation } from "react-router-dom";
 import AudioRead from "./AudioRead";
 
 const Homeque = () => {
-  const speech = useRef(new SpeechSynthesisUtterance()).current;
   const [voices, setVoices] = useState([]);
-  
-  useEffect(() => {
-    const loadVoices = () => {
-      const newVoices = window.speechSynthesis.getVoices();
-      speech.voice = newVoices.find(voice => voice.lang === "hi-IN"); // Example: set to Hindi voice
-      setVoices(newVoices);
-    };
-
-    loadVoices();
-    window.speechSynthesis.onvoiceschanged = loadVoices;
-
-    return () => {
-      window.speechSynthesis.onvoiceschanged = null;
-    };
-  }, []);
-
+  const [loading, setLoading] = useState(true);
   const location = useLocation();
   const [chap, setChap] = useState(1);
   const [ver, setVer] = useState(1);
-  const [loading, setLoading] = useState(true);
-
+  
   const [chapter, setChapter] = useState("");
   const [verse, setVerse] = useState("");
   const [slok, setSlok] = useState("");
   const [transliteration, setTransliteration] = useState("");
   const [slokHindi, setSlokHindi] = useState("");
   const [slokEnglish, setSlokEnglish] = useState("");
+
+  const speech = useRef(new SpeechSynthesisUtterance()).current;
+
+  useEffect(() => {
+    const fetchVoices = () => {
+      const voices = window.speechSynthesis.getVoices();
+      setVoices(voices);
+    };
+
+    // Fetch voices when component mounts
+    fetchVoices();
+
+    // Update voices when changed
+    window.speechSynthesis.onvoiceschanged = fetchVoices;
+
+    // Clean up event listener
+    return () => {
+      window.speechSynthesis.onvoiceschanged = null;
+    };
+  }, []);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -57,10 +60,10 @@ const Homeque = () => {
   const reqHandler = async (chap, ver) => {
     const currentURL =
       "https://vedicvani-backend.onrender.com" + window.location.pathname;
-    LoadData(currentURL);
+    loadVerseData(currentURL);
   };
 
-  const LoadData = async (url) => {
+  const loadVerseData = async (url) => {
     try {
       const response = await fetch(url);
       if (response.ok) {
@@ -109,15 +112,30 @@ const Homeque = () => {
       alert("Already on the first chapter and verse");
     }
   };
+
   useEffect(() => {
     // Alert on component load
     showVolumeAlert();
-  }, [0]); // Empty dependency array ensures this effect runs only once on mount
+  }, []);
 
   const showVolumeAlert = () => {
     const alertMessage = "Mind It : Double Click on the Volume Icon to Change the Respective Audio";
     alert(alertMessage);
   };
+
+  useEffect(() => {
+    if (voices.length > 0) {
+      // Find Google Hindi voice
+      const googleHindiVoice = voices.find(voice => voice.lang === "hi-IN");
+
+      if (googleHindiVoice) {
+        // Set the speech synthesis voice
+        speech.voice = googleHindiVoice;
+      } else {
+        console.warn("Google Hindi voice not found.");
+      }
+    }
+  }, [voices]);
 
   return (
     <div className="flex flex-col justify-center items-center min-h-screen max-w-5xl mx-auto px-4">
