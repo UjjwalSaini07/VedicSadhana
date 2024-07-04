@@ -255,7 +255,7 @@ const Chapters = () => {
       {Data && (
         <div className="text-center flex flex-col justify-center items-center">
           <p
-            className="text-[1.5rem] text-gray-900 w-[70vw]"
+            className="text-[1.5rem] text-gray-900 w-[86vw] sm:w-[70vw]"
             dangerouslySetInnerHTML={textFormatter(Data.summary.hi)}
           ></p>
           {/* Buttons for Read Aloud (Mobile Only) */}
@@ -275,7 +275,7 @@ const Chapters = () => {
           }} />
 
           <p
-            className="text-[1.5rem] text-gray-900 w-[70vw]"
+            className="text-[1.5rem] text-gray-900 w-[95vw] sm:w-[70vw]"
             dangerouslySetInnerHTML={textFormatter(Data.summary.en)}
           ></p>
 
@@ -288,21 +288,21 @@ const Chapters = () => {
         </div>
       )}
 
-      <div className='flex justify-content-around items-center p-10'>
+      <div className='flex justify-content-around items-center p-4 sm:p-10'>
         {isPreviousEnabled ? (
           <Link to={`/api/chapter/${chap - 1}`} id="previous">
-            <button type="button" className='w-[10rem] btn btn-danger' onClick={changePrevious}>Previous</button>
+            <button type="button" className='w-[8rem] sm:w-[10rem] btn btn-danger' onClick={changePrevious}>Previous</button>
           </Link>
         ) : (
-          <button type="button" className='w-[10rem] btn btn-danger' disabled>Previous</button>
+          <button type="button" className='w-[8rem] sm:w-[10rem] btn btn-danger' disabled>Previous</button>
         )}
 
         {isNextEnabled ? (
           <Link to={`/api/chapter/${chap + 1}`} id="next">
-            <button type="button" className='w-[10rem] btn btn-danger' onClick={changeNext}>Next</button>
+            <button type="button" className='w-[8rem] sm:w-[10rem] btn btn-danger' onClick={changeNext}>Next</button>
           </Link>
         ) : (
-          <button type="button" className='w-[10rem] btn btn-danger' disabled>Next</button>
+          <button type="button" className='w-[8rem] sm:w-[10rem] btn btn-danger' disabled>Next</button>
         )}
       </div>
 
