@@ -12,6 +12,7 @@ Explore the timeless wisdom of the Bhagavad Gita with in-depth shlokas, translat
             <td><b>🌟 Stars</b></td>
             <td><b>🍴 Forks</b></td>
             <td><b>🐛 Issues</b></td>
+            <td><b>📏 Repo Size</b></td>
             <td><b>🔔 Open PRs</b></td>
             <td><b>🔕 Close PRs</b></td>
         </tr>
@@ -21,6 +22,7 @@ Explore the timeless wisdom of the Bhagavad Gita with in-depth shlokas, translat
             <td><img alt="Stars" src="https://img.shields.io/github/stars/UjjwalSaini07/VedicSadhana?style=flat&logo=github"/></td>
              <td><img alt="Forks" src="https://img.shields.io/github/forks/UjjwalSaini07/VedicSadhana?style=flat&logo=github"/></td>
             <td><img alt="Issues" src="https://img.shields.io/github/issues/UjjwalSaini07/VedicSadhana?style=flat&logo=github"/></td>
+            <td><img alt="Repo Size" src="https://img.shields.io/github/repo-size/UjjwalSaini07/VedicSadhana?style=flat&logo=github"/></td>
             <td><img alt="Open Pull Requests" src="https://img.shields.io/github/issues-pr/UjjwalSaini07/VedicSadhana?style=flat&logo=github"/></td>
            <td><img alt="Close Pull Requests" src="https://img.shields.io/github/issues-pr-closed/UjjwalSaini07/VedicSadhana?style=flat&color=critical&logo=github"/></td>
         </tr>
