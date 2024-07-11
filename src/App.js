@@ -8,6 +8,7 @@ import Snowfall from "react-snowfall";
 import Chapters from "./components/Chapters";
 import "./App.css";
 import Resources from "./components/Resources";
+import BhaktiGeet from "./components/BhaktiGeet.js";
 import AboutUs from "./components/AboutUs.js";
 import MahabharatCarousel from "./components/Mahabharat_carousel.js";
 import RamayanaCarousel from "./components/Ramayana_carousel";
@@ -24,7 +25,7 @@ const App = () => {
         <Navbar />
         <Snowfall
           color="white"
-          snowflakeCount={100}
+          snowflakeCount={150}
           style={{ position: "absolute", zIndex: 3 }}
         />
         <Routes>
@@ -33,6 +34,7 @@ const App = () => {
             <Route path="/api/chapter/:chap/shlok/:ver" element={<Homeque />} />
             <Route path="/api/chapter/:chap" element={<Chapters />} />
             <Route path="/api/resources" element={<Resources />} />
+            <Route path="/api/BhaktiGeet" element={<BhaktiGeet />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/api/aboutus" element={<AboutUs />} />
             <Route path="/api/Mahabharat_carousel" element={<MahabharatCarousel />} />
