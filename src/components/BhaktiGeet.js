@@ -1,12 +1,8 @@
 // Todo: Perfect Change - Responsive in Matrix Styling
 import React, { useState, useRef, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faPlay,
-  faPause,
-  faStepBackward,
-  faStepForward,
-} from "@fortawesome/free-solid-svg-icons";
+import {faPlay, faPause, faStepBackward, faStepForward,}
+from "@fortawesome/free-solid-svg-icons";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { Typewriter } from "react-simple-typewriter";
 
