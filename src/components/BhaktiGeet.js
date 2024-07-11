@@ -300,7 +300,8 @@ const songs = [
   },
   {
     title: "108 गणपती महामंत्र",
-    artist: "Priya Dhodi, Dipesh Dhodi",
+    artist: "Priya Dhodi",
+    // artist: "Priya Dhodi, Dipesh Dhodi",
     albumArt: img4,
     src: song4,
   },
@@ -341,7 +342,8 @@ const songs = [
     src: song10,
   },
   {
-    title: "Shreeman Narayan",
+    title: "Hari Hari",
+    // title: "Shreeman Narayan",
     artist: "Studio Sangeeta",
     albumArt: img11,
     src: song11,
