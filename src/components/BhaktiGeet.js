@@ -40,27 +40,6 @@ import img13 from "./BhaktiGeetAssets/Images/Img13_1.png";
 import img14 from "./BhaktiGeetAssets/Images/Img14.png";
 import img15 from "./BhaktiGeetAssets/Images/Img15.png";
 
-// Todo: Adding TypeWritter
-// const h1 {
-//   text-transform: uppercase;
-//   font-size: 2rem;
-//   font-weight: 700;
-//   color: #fff;
-//   margin-bottom: 30px;
-// }
-
-{/* <h1>
-  <Typewriter
-    words={["Bhakti Geet"]}
-    loop={200}
-    cursor
-    cursorStyle="_"
-    typeSpeed={500}
-    deleteSpeed={100}
-    delaySpeed={1200}
-  />
-</h1>; */}
-
 const isMobile = window.innerWidth <= 768;
 
 const MusicPlayer = ({
@@ -406,8 +385,29 @@ const App = () => {
     padding: "5px",
   };
 
+  const headerStyle = {
+    width: "100%",
+    textAlign: "center",
+    marginBottom: "15px",
+    fontFamily: "Arial, sans-serif",
+    fontSize: isMobile ? "1.5rem" : "2.5rem",
+    color: "#ffffff",
+    fontWeight: "450",
+  };
+
   return (
     <div style={appStyle}>
+      <div style={headerStyle}>
+        <Typewriter
+          words={['Welcome to Bhakti Geet', 'Feel the Divine Vibes']}
+          loop={true}
+          cursor
+          cursorStyle='_'
+          typeSpeed={180}
+          deleteSpeed={100}
+          delaySpeed={1000}
+        />
+      </div>
       {songs.map((song, index) => (
         <MusicPlayer
           key={index}
@@ -423,6 +423,7 @@ const App = () => {
 };
 
 export default App;
+
 
 // Todo: Perfect Change - But Not Responsive : We make repsonsive in Column Styling
 // import React, { useState, useRef, useEffect } from 'react';
