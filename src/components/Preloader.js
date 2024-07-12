@@ -23,9 +23,9 @@ function Preloader() {
 
   return (
     <div id="preloader" ref={preloaderRef}>
-      <span className="text-[#1F2937] font-['Alegreya'] text-[5rem] relative w-[450px]" data-aos="fade-up" data-aos-delay="0">
+      <span className="text-[#1F2937] font-['Alegreya'] text-[5rem] relative w-[315px] sm: w-[400px]" data-aos="fade-up" data-aos-delay="0">
         VedicVani
-          <img className='absolute h-[100px] w-full top-[23px]' data-aos="fade-right" src={preimage} alt="" />
+          <img className='absolute h-[100px] w-full top-[15px] sm:top-[16px]' data-aos="fade-right" src={preimage} alt="" />
       </span>
     </div>)
 }
