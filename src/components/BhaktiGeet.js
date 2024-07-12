@@ -336,7 +336,6 @@ const songs = [
     src: song10,
   },
   {
-    // title: "Hari Hari",
     title: "Shreeman Narayan",
     artist: "Studio Sangeeta",
     albumArt: img11,
