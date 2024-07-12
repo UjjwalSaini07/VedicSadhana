@@ -42,10 +42,19 @@ Explore the timeless wisdom of the Bhagavad Gita with in-depth shlokas, translat
 ```bash
   https://bhagavadgitaapi.in/
 ```
+<!--```bash
+  https://www.kaggle.com/datasets/ptprashanttripathi/bhagavad-gita-api-database
+```-->
 
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
-| `api_key` | `string` | **Required**. Your API key |
+| `GET /slok` | `FREE` | **FREE To Use**. |
+| `GET /slok/:ch/:sl` | `FREE` | **FREE To Use**. |
+| `GET /chapters` | `FREE` | **FREE To Use**. |
+| `GET /chapter/:ch` | `FREE` | **FREE To Use**. |
+
+- But API is Not Required If U follow Installation Process
+<!--| `api_key` | `string` | **Required**. Your API key |-->
 
 
 
