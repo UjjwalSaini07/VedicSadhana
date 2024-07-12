@@ -1,7 +1,8 @@
+
 // Todo: Perfect Change - Responsive : Repsonsive in Column Styling
 import React, { useState, useRef, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faPlay, faPause, faStepBackward, faStepForward,}
+import {faPlay, faPause, faStepBackward, faStepForward, faForward, faBackward} 
 from "@fortawesome/free-solid-svg-icons";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { Typewriter } from "react-simple-typewriter";
@@ -84,6 +85,18 @@ const MusicPlayer = ({
     setCurrentTime(audio.currentTime);
   };
 
+  const fastForward = () => {
+    const audio = audioRef.current;
+    audio.currentTime = Math.min(audio.currentTime + 10, audio.duration);
+    setCurrentTime(audio.currentTime);
+  };
+
+  const rewind = () => {
+    const audio = audioRef.current;
+    audio.currentTime = Math.max(audio.currentTime - 10, 0);
+    setCurrentTime(audio.currentTime);
+  };
+
   const formatTime = (time) => {
     const minutes = Math.floor(time / 60);
     const seconds = Math.floor(time % 60)
@@ -120,7 +133,7 @@ const MusicPlayer = ({
     margin: "8px 0",
   };
 
-  const albumArtContainerStyle = { //Todo: Danger Zone - Change when dimension less than 330px {In MOBILE VIEW}
+  const albumArtContainerStyle = {
     margin: "20px 0",
     height: "240px",
     width: "220px",
@@ -218,10 +231,22 @@ const MusicPlayer = ({
           <FontAwesomeIcon icon={faStepBackward} size="lg" />
         </button>
         <button
+          style={{ ...buttonStyle, fontSize: "1.25em" }}
+          onClick={rewind}
+        >
+          <FontAwesomeIcon icon={faBackward} size="lg" />
+        </button>
+        <button
           style={{ ...buttonStyle, fontSize: "1.5em" }}
           onClick={togglePlayPause}
         >
           <FontAwesomeIcon icon={isPlaying ? faPause : faPlay} size="lg" />
+        </button>
+        <button
+          style={{ ...buttonStyle, fontSize: "1.25em" }}
+          onClick={fastForward}
+        >
+          <FontAwesomeIcon icon={faForward} size="lg" />
         </button>
         <button
           style={{ ...buttonStyle, fontSize: "1.5em" }}
@@ -840,4 +865,3 @@ export default App;
 // };
 
 // export default App;
-
