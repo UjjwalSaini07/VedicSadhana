@@ -275,13 +275,13 @@ document.head.appendChild(styleSheet);
 
 const songs = [
   {
-    title: "Ganesh Aarti",
+    title: "गणेश आरती",
     artist: "Rahul Vaidya",
     albumArt: img1,
     src: song1,
   },
   {
-    title: "Shri Ram Stuti",
+    title: "श्री राम स्तुति",
     artist: "Ravindra Singh",
     albumArt: img2,
     src: song2,
@@ -313,7 +313,7 @@ const songs = [
   },
   {
     title: "Kishori Radhe",
-    artist: "Gaurav Krishna",
+    artist: "Gaurav Krishna Goswami",
     albumArt: img7,
     src: song7,
   },
