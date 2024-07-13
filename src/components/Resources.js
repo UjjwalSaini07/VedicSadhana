@@ -20,6 +20,8 @@ import MatsyaPuran from "./Resource_Image/MatsyaPuran.jpg";
 // Importing icons from react-icons
 import { FaShoppingCart, FaBookOpen } from "react-icons/fa";
 
+const isMobile = window.innerWidth <= 768;
+
 const books = [
   {
     name: "The Bhagavad Gita",
@@ -134,11 +136,12 @@ const appStyle = {
 };
 
 const headerStyle = {
-  fontSize: "2rem",
-  fontWeight: "bold",
-  marginBottom: "1px",
-  color: "#ffffff",
+  width: "100%",
   textAlign: "center",
+  fontFamily: "Arial, sans-serif",
+  fontSize: isMobile ? "1.9rem" : "2.5rem",
+  color: "#ffffff",
+  fontWeight: "450",
 };
 
 const Resources = () => {

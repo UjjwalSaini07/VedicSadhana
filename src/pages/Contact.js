@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import krishna from "./krishnabg.png";
-import logounder from "../components/LogoUnder.png";
+import krishna from "../components/CodeAssets/krishnabg.png";
+import logounder from "../components/CodeAssets/LogoUnder.png";
 
 const Contact = () => {
   useEffect(() => {
@@ -80,6 +80,7 @@ const Contact = () => {
           <div style={pContainerStyle}>
             <p>
               Welcome to Vedic Vani! We share the wisdom of the Vedic tradition. For questions, collaborations, or just to say hello, reach out to us. Seeking guidance, feedback, or partnership opportunities? Our team is here to help. Contact us using the details below. We value your thoughts and respond promptly. Thank you for your interest in Vedic Vani - we look forward to connecting with you!
+              <span style={{ display: 'block', marginTop: '10px' }}>Developer - Ujjwal Saini</span>
             </p>
           </div>
         </div>
@@ -88,6 +89,7 @@ const Contact = () => {
       <div id="detail_fill_container" className="flex relative justify-center items-center" style={containerStyle}>
         <p>
           Welcome to Vedic Vani! We share the wisdom of the Vedic tradition. For questions, collaborations, or just to say hello, reach out to us. Seeking guidance, feedback, or partnership opportunities? Our team is here to help. Contact us using the details below. We value your thoughts and respond promptly. Thank you for your interest in Vedic Vani - we look forward to connecting with you!
+          <span style={{ display: 'block', marginTop: '10px' }}>Developer - Ujjwal Saini</span>
         </p>
       </div>
 

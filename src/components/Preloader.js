@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import './style.css'
-import preimage from './LogoUnder.png'
+import preimage from './CodeAssets/LogoUnder.png'
 import AOS from 'aos';
 
 
