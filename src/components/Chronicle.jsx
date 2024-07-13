@@ -4,6 +4,9 @@ import ReactAudioPlayer from 'react-audio-player';
 import Ramayana from "./Carousel_Images/CoverImages/Ramayana_Image.jpg";
 import Mahabharat from "./Carousel_Images/CoverImages/Mahabharat_Image.jpg";
 import song from './Flute2.mp3';
+import { Typewriter } from "react-simple-typewriter";
+
+const isMobile = window.innerWidth <= 768;
 
 const slideCover = [
     {
@@ -18,6 +21,15 @@ const slideCover = [
     },
 ];
 
+const headerStyle = {
+    width: "100%",
+    textAlign: "center",
+    fontFamily: "Arial, sans-serif",
+    fontSize: isMobile ? "1.9rem" : "2.5rem",
+    color: "#ffffff",
+    fontWeight: "450",
+};
+
 const Chronicle = () => {
     return (
         <div>
@@ -28,7 +40,29 @@ const Chronicle = () => {
                 volume={0.25}
                 style={{ display: 'none' }} // Hide the audio player
             />
-            <div className="flex flex-wrap justify-center items-center p-5">
+            <div style={headerStyle} className="hidden sm:block">
+                <Typewriter
+                words={["Welcome to Chronicle Section", "Enjoy Epic tales of virtue and duty"]}
+                loop={true}
+                cursor
+                cursorStyle="_"
+                typeSpeed={180}
+                deleteSpeed={80}
+                delaySpeed={1000}
+                />
+            </div>
+            <div style={headerStyle} className="block sm:hidden">
+                <Typewriter
+                words={["Welcome Here !!", "Enjoy Slideshow"]}
+                loop={true}
+                cursor
+                cursorStyle="_"
+                typeSpeed={180}
+                deleteSpeed={100}
+                delaySpeed={1000}
+                />
+            </div>
+            <div className="flex flex-wrap justify-center items-center p-4">
                 {slideCover.map((cover, index) => (
                     <div key={index} className="bg-white rounded-xl shadow-lg m-4 w-72 h-[500px] overflow-hidden transform hover:scale-105 transition-transform duration-300 hover:shadow-2xl">
                         <Link to={cover.route} style={{ textDecoration: 'none' }}>
