@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import ReactAudioPlayer from 'react-audio-player';
 import Ramayana from "./Carousel_Images/CoverImages/Ramayana_Image.jpg";
 import Mahabharat from "./Carousel_Images/CoverImages/Mahabharat_Image.jpg";
-import song from './Flute2.mp3';
+import song from './FluteTunes/Flute2.mp3';
 import { Typewriter } from "react-simple-typewriter";
 
 const isMobile = window.innerWidth <= 768;

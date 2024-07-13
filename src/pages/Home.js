@@ -5,7 +5,7 @@ import logounder from "../components/LogoUnder.png";
 import { Link } from "react-router-dom";
 import './home.css';
 import { AudioPlayer } from 'react-audio-play';
-import song from '../components/krishnaflute.mp3';
+import song from '../components/FluteTunes/krishnaflute.mp3';
 import AOS from 'aos';
 
 function Home() {
@@ -55,7 +55,7 @@ function Home() {
       <div className="relative mb-8">
         <img data-aos="fade-right" className="backdrop-opacity-1 absolute w-[28rem] max-w-full top-2 left-[12%] transform -translate-x-1/2" src={logounder} alt="logo" />
         <p className="text-5xl font-[Alegreya] text-center">VedicVani</p>
-        <AudioPlayer className="invisible" loop autoPlay src={song} volume={5} />
+        <AudioPlayer className="invisible" loop autoPlay src={song} volume={6.7} />
       </div>
 
       <div data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="500">

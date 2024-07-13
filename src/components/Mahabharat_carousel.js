@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import ReactAudioPlayer from 'react-audio-player';
 import { Typewriter } from 'react-simple-typewriter';
 import { FaHome } from 'react-icons/fa';
-import Flute3 from './Flute3.mp3';
+import Flute3 from './FluteTunes/Flute3.mp3';
 import chronicle from './Chronicle';
 
 // Adding Images
