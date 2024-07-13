@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import image1 from './krishnabg.png'; // Update this path to the uploaded image file
+import image1 from './CodeAssets/krishnabg.png'; // Update this path to the uploaded image file
 
 function AboutUs() {
   const [isHovered, setIsHovered] = useState(false);

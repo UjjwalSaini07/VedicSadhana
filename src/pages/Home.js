@@ -1,7 +1,6 @@
-// Todo: Changes Done on Buttons - Go, Read Shlok's, Chapter's Summary it fix the alignment
 import React, { useState, useEffect } from "react";
-import krishna from "./krishnabg.png";
-import logounder from "../components/LogoUnder.png";
+import krishna from "../components/CodeAssets/krishnabg.png";
+import logounder from "../components/CodeAssets/LogoUnder.png";
 import { Link } from "react-router-dom";
 import './home.css';
 import { AudioPlayer } from 'react-audio-play';

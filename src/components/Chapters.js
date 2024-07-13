@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import Krihnabg from '../pages/krishnabg.png';
-import icon from './Icon.svg';
+import Krihnabg from './CodeAssets/krishnabg.png';
+import icon from './CodeAssets/Icon.svg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Chapters = () => {

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import krishna from "./krishnabg.png";
-import logounder from "../components/LogoUnder.png";
+import krishna from "../components/CodeAssets/krishnabg.png";
+import logounder from "../components/CodeAssets/LogoUnder.png";
 
 const Contact = () => {
   useEffect(() => {

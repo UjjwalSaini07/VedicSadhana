@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
-import bgpic from "./Homebg.png";
-import icon from "./Icon.svg";
+import bgpic from "./CodeAssets/Homebg.png";
+import icon from "./CodeAssets/Icon.svg";
 import "../App.css";
 import { Link, useLocation } from "react-router-dom";
 import AudioRead from "./AudioRead";

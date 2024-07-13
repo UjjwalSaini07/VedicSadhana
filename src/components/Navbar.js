@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import logounder from './LogoUnder.png';
+import logounder from './CodeAssets/LogoUnder.png';
 import { Link, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
