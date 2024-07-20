@@ -23,6 +23,7 @@ import song12 from "./BhaktiGeetAssets/Audios/Audio12_ShivjiMahamrityunjay.mp3";
 import song13 from "./BhaktiGeetAssets/Audios/Audio13_RamSiyaRam.mp3";
 import song14 from "./BhaktiGeetAssets/Audios/Audio14_Hanuman.mp3";
 import song15 from "./BhaktiGeetAssets/Audios/Audio15_Sundarkand.mp3";
+import song16 from "./BhaktiGeetAssets/Audios/Audio16_ShivaRudra.mp3";
 
 //Import all Images Here
 import img1 from "./BhaktiGeetAssets/Images/Img1.jpg";
@@ -40,6 +41,8 @@ import img12 from "./BhaktiGeetAssets/Images/Img12.png";
 import img13 from "./BhaktiGeetAssets/Images/Img13_1.png";
 import img14 from "./BhaktiGeetAssets/Images/Img14.png";
 import img15 from "./BhaktiGeetAssets/Images/Img15.png";
+import img16 from "./BhaktiGeetAssets/Images/Img16.jpg";
+
 
 const isMobile = window.innerWidth <= 768;
 
@@ -346,6 +349,12 @@ const songs = [
     artist: "Shankar Sahney",
     albumArt: img12,
     src: song12,
+  },
+  {
+    title: "श्री शिव रुद्राष्टकम",
+    artist: "Religious India",
+    albumArt: img16,
+    src: song16,
   },
   {
     title: "Ram Siya Ram",

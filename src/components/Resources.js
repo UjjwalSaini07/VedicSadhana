@@ -9,6 +9,7 @@ import Holy_Veda from "./Resource_Image/Holy_Veda.png";
 import Kalki from "./Resource_Image/Kalki.jpg";
 import Upanishads from "./Resource_Image/upanishads.jpg";
 import VishnuPuranas from "./Resource_Image/VishnuPuranas.jpg";
+import BhavishyaPuranas from "./Resource_Image/BhavishyaMalikaPuran.jpg";
 import Puranas from "./Resource_Image/Puranas.jpg";
 import ShivaPurana from "./Resource_Image/ShivaPurana.jpg";
 import AgniPurana from "./Resource_Image/The Agni-Purana.jpg";
@@ -77,6 +78,13 @@ const books = [
     buyLink:
       "https://www.exoticindiaart.com/book/details/vishnu-mahapuranam-azf640/",
     readLink: "https://archive.org/details/vishnu-puran-gita-press/mode/2up",
+  },
+  {
+    name: "Bhavishya Malika Puran",
+    image: BhavishyaPuranas,
+    buyLink:
+      "https://www.amazon.in/Bhavishya-Malika-Puran-%E0%A4%AD%E0%A4%B5%E0%A4%BF%E0%A4%B7%E0%A5%8D%E0%A4%AF-%E0%A4%AE%E0%A4%BE%E0%A4%B2%E0%A4%BF%E0%A4%95%E0%A4%BE/dp/B0BT27525X",
+    readLink: "https://drive.google.com/file/d/1_q88GMUUoF4AFU9EhFXx4Wcz9JQQGeCm/view?usp=sharing",
   },
   {
     name: "The Puranas",
@@ -195,6 +203,7 @@ const Resources = () => {
               )}
               {(book.name === "The Ramayana" ||
                 book.name === "The Brahmanas" ||
+                book.name === "Bhavishya Malika Puran" ||
                 book.name === "The AgniPurana") && (
                 <p className="text-gray-600">
                   Explore the profound insights and ancient wisdom contained in
