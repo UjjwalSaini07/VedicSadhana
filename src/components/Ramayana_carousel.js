@@ -8,6 +8,7 @@ import { Typewriter } from 'react-simple-typewriter';
 import { FaHome } from 'react-icons/fa';
 import Flute4 from './FluteTunes/Flute4.mp3';
 import chronicle from './Chronicle';
+import { motion } from "framer-motion";
 
 // Adding Images
 import Image0 from "./Carousel_Images/Ramyana/__0_Logo.png";
@@ -278,6 +279,29 @@ import Image264 from "./Carousel_Images/Ramyana/_59.png";
 import Image265 from "./Carousel_Images/Ramyana/_59_1.jpg";
 import Image266 from "./Carousel_Images/Ramyana/_60.png";
 
+const textVariant = (delay) => ({
+  hidden: { y: -50, opacity: 0 },
+  show: {
+    y: 0,
+    opacity: 1,
+    transition: { type: "spring", duration: 1.25, delay: delay },
+  },
+});
+
+const textVariantdistort = (delay) => ({
+  initial: { y: -50, opacity: 0 },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      stiffness: 100,  // Adjust stiffness to control the bounce
+      damping: 20,
+      duration: 1.25,
+      delay: delay
+    },
+  },
+});
 
 const RamayanaCarousel = () => {
   const imageList = [
@@ -517,10 +541,22 @@ const RamayanaCarousel = () => {
         `}
       </style>
       <div className="ramayana-carousel">
-        <Link to='/api/chronicle' className="innovative-button">Chronicles</Link>
+        
+        {/* <Link to='/api/chronicle' className="innovative-button">Chronicles</Link> */}
         <Link to='/api/chronicle' className="home-icon">
+        <motion.div
+          variants={textVariant(0.48)}
+          initial="hidden"
+          animate="show"
+        >
           <FaHome />
+        </motion.div>
         </Link>
+        <motion.div
+          variants={textVariant(0.64)}
+          initial="hidden"
+          animate="show"
+        >
         <h1>
           <Typewriter
             words={['The Ramayana']}
@@ -532,6 +568,12 @@ const RamayanaCarousel = () => {
             delaySpeed={1200}
           />
         </h1>
+        </motion.div>
+        <motion.div
+          variants={textVariant(1.24)}
+          initial="hidden"
+          animate="show"
+        >
         <div className="slider-container">
           <Slider {...settings}>
             {imageList.map((image, index) => (
@@ -544,11 +586,12 @@ const RamayanaCarousel = () => {
             ))}
           </Slider>
         </div>
+        </motion.div>
         <ReactAudioPlayer
           src={Flute4}
           autoPlay
           loop
-          volume={0.2}
+          volume={0.34}
           style={{ display: 'none' }} // Hide the audio player
         />
       </div>

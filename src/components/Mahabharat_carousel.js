@@ -8,6 +8,7 @@ import { Typewriter } from 'react-simple-typewriter';
 import { FaHome } from 'react-icons/fa';
 import Flute3 from './FluteTunes/Flute3.mp3';
 import chronicle from './Chronicle';
+import { motion } from "framer-motion";
 
 // Adding Images
 import Image1 from "./Carousel_Images/Mahabharat/_0MahaBharat.png";
@@ -134,6 +135,15 @@ import Image121 from "./Carousel_Images/Mahabharat/_34.jpeg";
 import Image122 from "./Carousel_Images/Mahabharat/_35.jpeg";
 import Image123 from "./Carousel_Images/Mahabharat/_35_1.jpg";
 import Image124 from "./Carousel_Images/Mahabharat/last.jpg";
+
+const textVariant = (delay) => ({
+  hidden: { y: -50, opacity: 0 },
+  show: {
+    y: 0,
+    opacity: 1,
+    transition: { type: "spring", duration: 1.25, delay: delay },
+  },
+});
 
 const Mahabharatcarousel = () => {
   const imageList = [
@@ -338,10 +348,21 @@ const Mahabharatcarousel = () => {
         `}
       </style>
       <div className="mahabharat-carousel">
-        <Link to='/api/chronicle' className="innovative-button">Chronicles</Link>
+        {/* <Link to='/api/chronicle' className="innovative-button">Chronicles</Link> */}
         <Link to='/api/chronicle' className="home-icon">
+        <motion.div
+          variants={textVariant(0.48)}
+          initial="hidden"
+          animate="show"
+        >
           <FaHome />
+        </motion.div>
         </Link>
+        <motion.div
+          variants={textVariant(0.74)}
+          initial="hidden"
+          animate="show"
+        >
         <h1>
           <Typewriter
             words={['The Mahabharata']}
@@ -353,6 +374,12 @@ const Mahabharatcarousel = () => {
             delaySpeed={1200}
           />
         </h1>
+        </motion.div>
+        <motion.div
+          variants={textVariant(1.24)}
+          initial="hidden"
+          animate="show"
+        >
         <div className="slider-container">
           <Slider {...settings}>
             {imageList.map((image, index) => (
@@ -365,6 +392,7 @@ const Mahabharatcarousel = () => {
             ))}
           </Slider>
         </div>
+        </motion.div>
         <ReactAudioPlayer
           src={Flute3}
           autoPlay

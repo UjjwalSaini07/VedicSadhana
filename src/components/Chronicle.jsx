@@ -51,7 +51,7 @@ const headerStyle = {
     width: "100%",
     textAlign: "center",
     fontFamily: "Arial, sans-serif",
-    fontSize: isMobile ? "1.9rem" : "2.5rem",
+    fontSize: isMobile ? "1.9rem" : "2.6rem",
     color: "#ffffff",
     fontWeight: "450",
 };
@@ -60,7 +60,7 @@ const Chronicle = () => {
     const bounce = useSpring({
         from: { transform: 'translate3d(0, -180px, 0)' },
         to: { transform: 'translate3d(0, 0, 0)' },
-        config: { tension: 150, friction: 5.5 },
+        config: { tension: 150, friction: 6.8 },
     });
 
     return (
