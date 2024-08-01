@@ -155,12 +155,12 @@ function AboutUs() {
   const bounce = useSpring({
     from: { transform: 'translate3d(0, -180px, 0)' },
     to: { transform: 'translate3d(0, 0, 0)' },
-    config: { tension: 150, friction: 5.5 },
+    config: { tension: 150, friction: 8.5 },
   });
   const bounce2delay = useSpring({
     from: { transform: 'translate3d(0, -200px, 0)' },
     to: { transform: 'translate3d(0, 0, 0)' },
-    config: { tension: 150, friction: 5.5 },
+    config: { tension: 150, friction: 8.5 },
     delay: 50, // in milliseconds
   });
   

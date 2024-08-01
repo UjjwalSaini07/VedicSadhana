@@ -1,6 +1,18 @@
 import React, { useEffect } from "react";
+import { motion } from "framer-motion";
+
 import krishna from "../components/CodeAssets/krishnabg.png";
 import logounder from "../components/CodeAssets/LogoUnder.png";
+
+
+const textVariant = (delay) => ({
+  hidden: { y: -50, opacity: 0 },
+  show: {
+    y: 0,
+    opacity: 1,
+    transition: { type: "spring", duration: 1.25, delay: delay },
+  },
+});
 
 const Contact = () => {
   useEffect(() => {
@@ -73,27 +85,62 @@ const Contact = () => {
       <div id="detail_fill_container" className="flex justify-center items-center">
         <img id="contact_image" src={krishna} alt='krishna' />
         <div id="Form_container">
-          <div className="relative mb-3 flex justify-center items-center">
-            <img data-aos="fade-right" style={{ top: isMobile ? '2rem' : '1.5rem', zIndex: 1 }} className="backdrop-opacity-15 absolute w-[25rem] max-w-full transform -translate-x-1/2" src={logounder} alt="logo" />
-            <p style={{ fontSize: isMobile ? '4rem' : '5rem', color: 'blue', position: 'relative', zIndex: 1 }} className="font-[Alegreya] text-center">VedicVani</p>
-          </div>
+          <motion.div
+            variants={textVariant(0.46)}
+            initial="hidden"
+            animate="show"
+          >
+            <div className="relative mb-3 flex justify-center items-center">
+              <img data-aos="fade-right" style={{ top: isMobile ? '2rem' : '1.5rem', zIndex: 1 }} className="backdrop-opacity-15 absolute w-[25rem] max-w-full transform -translate-x-1/2" src={logounder} alt="logo" />
+              <p style={{ fontSize: isMobile ? '4rem' : '5rem', color: 'blue', position: 'relative', zIndex: 1 }} className="font-[Alegreya] text-center">VedicVani</p>
+            </div>
+          </motion.div>
+          <motion.div
+            variants={textVariant(0.92)}
+            initial="hidden"
+            animate="show"
+          >
           <div style={pContainerStyle}>
+            <motion.div
+              variants={textVariant(1.42)}
+              initial="hidden"
+              animate="show"
+            >
             <p>
               Welcome to Vedic Vani! We share the wisdom of the Vedic tradition. For questions, collaborations, or just to say hello, reach out to us. Seeking guidance, feedback, or partnership opportunities? Our team is here to help. Contact us using the details below. We value your thoughts and respond promptly. Thank you for your interest in Vedic Vani - we look forward to connecting with you!
               <span style={{ display: 'block', marginTop: '10px' }}>Developer - Ujjwal Saini</span>
             </p>
+            </motion.div>
           </div>
+          </motion.div>
         </div>
       </div>
 
+      <motion.div
+        variants={textVariant(0.92)}
+        initial="hidden"
+        animate="show"
+      >
       <div id="detail_fill_container" className="flex relative justify-center items-center" style={containerStyle}>
+        <motion.div
+          variants={textVariant(1.92)}
+          initial="hidden"
+          animate="show"
+        >
         <p>
           Welcome to Vedic Vani! We share the wisdom of the Vedic tradition. For questions, collaborations, or just to say hello, reach out to us. Seeking guidance, feedback, or partnership opportunities? Our team is here to help. Contact us using the details below. We value your thoughts and respond promptly. Thank you for your interest in Vedic Vani - we look forward to connecting with you!
           <span style={{ display: 'block', marginTop: '10px' }}>Developer - Ujjwal Saini</span>
         </p>
+        </motion.div>
       </div>
+      </motion.div>
 
       {/* Form container */}
+      <motion.div
+        variants={textVariant(2.42)}
+        initial="hidden"
+        animate="show"
+      >
       <div id="detail_fill_container" className="flex relative justify-center items-center" style={formContainerStyle}>
         {!isMobile ? (
           <div
@@ -117,6 +164,7 @@ const Contact = () => {
           />
         )}
       </div>
+      </motion.div>
     </section>
   );
 }
