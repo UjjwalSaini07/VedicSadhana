@@ -1,5 +1,6 @@
 import React from "react";
 import { Typewriter } from "react-simple-typewriter";
+import { motion } from "framer-motion";
 
 // Importing Required Images
 import Bhagvat_Gita from "./Resource_Image/Bhagvat_Gita.png";
@@ -22,6 +23,15 @@ import MatsyaPuran from "./Resource_Image/MatsyaPuran.jpg";
 import { FaShoppingCart, FaBookOpen } from "react-icons/fa";
 
 const isMobile = window.innerWidth <= 768;
+
+const textVariant = (delay) => ({
+  hidden: { y: -50, opacity: 0 },
+  show: {
+    y: 0,
+    opacity: 1,
+    transition: { type: "spring", duration: 1.25, delay: delay },
+  },
+});
 
 const books = [
   {
@@ -153,9 +163,15 @@ const headerStyle = {
 };
 
 const Resources = () => {
+  
   return (
     <div style={appStyle}>
       <div style={headerStyle} className="hidden sm:block">
+      <motion.div
+        variants={textVariant(0.7)}
+        initial="hidden"
+        animate="show"
+      >
         <Typewriter
           words={["Welcome to Resources Section", "Enjoy the Divine Knowledge"]}
           loop={true}
@@ -165,8 +181,14 @@ const Resources = () => {
           deleteSpeed={80}
           delaySpeed={1000}
         />
+        </motion.div>
       </div>
       <div style={headerStyle} className="block sm:hidden">
+      <motion.div
+        variants={textVariant(0.7)}
+        initial="hidden"
+        animate="show"
+      >
         <Typewriter
           words={["Welcome Here !!", "Enjoy Vedic Knowledge"]}
           loop={true}
@@ -176,13 +198,20 @@ const Resources = () => {
           deleteSpeed={100}
           delaySpeed={1000}
         />
+        </motion.div>
       </div>
+
       <div className="flex flex-wrap justify-center items-center p-4">
         {books.map((book, index) => (
           <div
             key={index}
             className="bg-white rounded-xl shadow-lg m-4 w-72 h-[600px] sm:h-[530px] overflow-hidden transform hover:scale-105 transition-transform duration-300 hover:shadow-2xl"
           >
+            <motion.div
+              variants={textVariant(1.2)}
+              initial="hidden"
+              animate="show"
+            >
             <img
               className="w-full h-72 object-contain object-center"
               src={book.image}
@@ -250,6 +279,7 @@ const Resources = () => {
                 </a>
               </div>
             </div>
+            </motion.div>
           </div>
         ))}
       </div>

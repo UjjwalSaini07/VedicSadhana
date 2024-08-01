@@ -24,6 +24,7 @@
     "react-simple-typewriter": "^5.0.1",
     "react-slick": "^0.30.2",
     "react-snowfall": "^1.2.1",
+    "react-spring": "^9.7.4",
     "react-tsparticles": "^2.12.2",
     "slick-carousel": "^1.8.1",
     "tsparticles-engine": "^2.12.0",
