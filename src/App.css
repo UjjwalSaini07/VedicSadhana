@@ -66,3 +66,44 @@ body{
   /* background-color: orange; */
   border-radius: 10px;
 }
+
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+}
+
+/* Scrollbar Track */
+::-webkit-scrollbar-track {
+  background: linear-gradient(180deg, #f0f4ff, #d6e4ff); /* Soft celestial gradient */
+  border-radius: 10px;
+  border: 2px solid #f5c94e; /* Elegant gold border */
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1), 0 0 10px rgba(245, 201, 78, 0.5); /* Soft inner shadow and outer glow */
+}
+
+/* Scrollbar Thumb */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #1a73e8, #0a47a9); /* Rich, divine blue gradient */
+  border-radius: 12px;
+  border: 3px solid #f5c94e; /* Thick gold border for luxury */
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3), 0 0 15px rgba(245, 201, 78, 0.8); /* Deep inner shadow and glowing outer shadow */
+  transition: background 0.4s ease, box-shadow 0.4s ease, transform 0.2s ease; /* Smooth transitions with slight scaling */
+}
+
+/* Thumb Hover Effect */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #0a47a9, #082b67); /* Darker, richer blue on hover */
+  transform: scale(1.1); /* Slight scale-up on hover */
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.4), 0 0 20px rgba(245, 201, 78, 1); /* Brighter and more intense glow on hover */
+}
+
+/* Scrollbar Corner */
+::-webkit-scrollbar-corner {
+  background: #f5c94e; /* Gold accent for continuity */
+}
+
+/* Firefox Styles */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #1a73e8 #f0f4ff;
+}

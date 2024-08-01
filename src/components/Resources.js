@@ -1,5 +1,6 @@
 import React from "react";
 import { Typewriter } from "react-simple-typewriter";
+import { motion } from "framer-motion";
 
 // Importing Required Images
 import Bhagvat_Gita from "./Resource_Image/Bhagvat_Gita.png";
@@ -22,6 +23,31 @@ import MatsyaPuran from "./Resource_Image/MatsyaPuran.jpg";
 import { FaShoppingCart, FaBookOpen } from "react-icons/fa";
 
 const isMobile = window.innerWidth <= 768;
+
+const textVariant = (delay) => ({
+  hidden: { y: -50, opacity: 0 },
+  show: {
+    y: 0,
+    opacity: 1,
+    transition: { type: "spring", duration: 1.25, delay: delay },
+  },
+});
+
+const textVariantdistort = (delay) => ({
+  initial: { y: -50, opacity: 0 },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      stiffness: 100,  // Adjust stiffness to control the bounce
+      damping: 20,
+      duration: 1.25,
+      delay: delay
+    },
+  },
+});
+
 
 const books = [
   {
@@ -153,9 +179,15 @@ const headerStyle = {
 };
 
 const Resources = () => {
+  
   return (
     <div style={appStyle}>
       <div style={headerStyle} className="hidden sm:block">
+      <motion.div
+        variants={textVariant(0.7)}
+        initial="hidden"
+        animate="show"
+      >
         <Typewriter
           words={["Welcome to Resources Section", "Enjoy the Divine Knowledge"]}
           loop={true}
@@ -165,8 +197,14 @@ const Resources = () => {
           deleteSpeed={80}
           delaySpeed={1000}
         />
+        </motion.div>
       </div>
       <div style={headerStyle} className="block sm:hidden">
+      <motion.div
+        variants={textVariant(0.7)}
+        initial="hidden"
+        animate="show"
+      >
         <Typewriter
           words={["Welcome Here !!", "Enjoy Vedic Knowledge"]}
           loop={true}
@@ -176,22 +214,46 @@ const Resources = () => {
           deleteSpeed={100}
           delaySpeed={1000}
         />
+        </motion.div>
       </div>
+      <motion.div
+        variants={textVariantdistort(1.0)}
+        initial="initial"
+        animate="animate"
+      >
       <div className="flex flex-wrap justify-center items-center p-4">
         {books.map((book, index) => (
           <div
             key={index}
             className="bg-white rounded-xl shadow-lg m-4 w-72 h-[600px] sm:h-[530px] overflow-hidden transform hover:scale-105 transition-transform duration-300 hover:shadow-2xl"
           >
+            <motion.div
+              variants={textVariant(1.64)}
+              initial="hidden"
+              animate="show"
+            >
             <img
               className="w-full h-72 object-contain object-center"
               src={book.image}
               alt={book.name}
             />
+            </motion.div>
             <div className="p-6 text-center">
+              <motion.div
+                variants={textVariant(1.97)}
+                initial="hidden"
+                animate="show"
+              >
               <h2 className="text-xl font-bold text-gray-800 mb-2">
                 {book.name}
               </h2>
+              </motion.div>
+
+              <motion.div
+                variants={textVariant(2.52)}
+                initial="hidden"
+                animate="show"
+              >
               {(book.name === "The Bhagavad Gita" ||
                 book.name === "Dharmayoddha Kalki" ||
                 book.name === "The Puranas" ||
@@ -231,6 +293,13 @@ const Resources = () => {
                   Explore the depth and wisdom of the {book.name}
                 </p>
               )}
+              </motion.div>
+
+              <motion.div
+                variants={textVariant(3.0)}
+                initial="hidden"
+                animate="show"
+              >
               <div className="flex flex-col sm:flex-row justify-center items-center gap-2 mt-4">
                 <a
                   href={book.buyLink}
@@ -249,10 +318,12 @@ const Resources = () => {
                   <FaBookOpen className="mr-1" /> Read Now
                 </a>
               </div>
+              </motion.div>
             </div>
           </div>
         ))}
       </div>
+      </motion.div>
     </div>
   );
 };
