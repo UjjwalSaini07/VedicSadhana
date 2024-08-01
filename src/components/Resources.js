@@ -33,6 +33,22 @@ const textVariant = (delay) => ({
   },
 });
 
+const textVariantdistort = (delay) => ({
+  initial: { y: -50, opacity: 0 },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      stiffness: 100,  // Adjust stiffness to control the bounce
+      damping: 20,
+      duration: 1.25,
+      delay: delay
+    },
+  },
+});
+
+
 const books = [
   {
     name: "The Bhagavad Gita",
@@ -200,7 +216,11 @@ const Resources = () => {
         />
         </motion.div>
       </div>
-
+      <motion.div
+        variants={textVariantdistort(1.0)}
+        initial="initial"
+        animate="animate"
+      >
       <div className="flex flex-wrap justify-center items-center p-4">
         {books.map((book, index) => (
           <div
@@ -208,7 +228,7 @@ const Resources = () => {
             className="bg-white rounded-xl shadow-lg m-4 w-72 h-[600px] sm:h-[530px] overflow-hidden transform hover:scale-105 transition-transform duration-300 hover:shadow-2xl"
           >
             <motion.div
-              variants={textVariant(1.2)}
+              variants={textVariant(1.64)}
               initial="hidden"
               animate="show"
             >
@@ -217,10 +237,23 @@ const Resources = () => {
               src={book.image}
               alt={book.name}
             />
+            </motion.div>
             <div className="p-6 text-center">
+              <motion.div
+                variants={textVariant(1.97)}
+                initial="hidden"
+                animate="show"
+              >
               <h2 className="text-xl font-bold text-gray-800 mb-2">
                 {book.name}
               </h2>
+              </motion.div>
+
+              <motion.div
+                variants={textVariant(2.52)}
+                initial="hidden"
+                animate="show"
+              >
               {(book.name === "The Bhagavad Gita" ||
                 book.name === "Dharmayoddha Kalki" ||
                 book.name === "The Puranas" ||
@@ -260,6 +293,13 @@ const Resources = () => {
                   Explore the depth and wisdom of the {book.name}
                 </p>
               )}
+              </motion.div>
+
+              <motion.div
+                variants={textVariant(3.0)}
+                initial="hidden"
+                animate="show"
+              >
               <div className="flex flex-col sm:flex-row justify-center items-center gap-2 mt-4">
                 <a
                   href={book.buyLink}
@@ -278,11 +318,12 @@ const Resources = () => {
                   <FaBookOpen className="mr-1" /> Read Now
                 </a>
               </div>
+              </motion.div>
             </div>
-            </motion.div>
           </div>
         ))}
       </div>
+      </motion.div>
     </div>
   );
 };
