@@ -1,4 +1,3 @@
-
 // Todo: Perfect Change - Responsive : Repsonsive in Column Styling
 import React, { useState, useRef, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -6,6 +5,8 @@ import {faPlay, faPause, faStepBackward, faStepForward, faForward, faBackward}
 from "@fortawesome/free-solid-svg-icons";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { Typewriter } from "react-simple-typewriter";
+import { motion } from "framer-motion";
+import { useSpring, animated } from '@react-spring/web';
 
 //Import all Song Here
 import song1 from "./BhaktiGeetAssets/Audios/Audio1_1_Ganeshji.mp3";
@@ -45,6 +46,30 @@ import img16 from "./BhaktiGeetAssets/Images/Img16.jpg";
 
 
 const isMobile = window.innerWidth <= 768;
+
+const textVariant = (delay) => ({
+  hidden: { y: -50, opacity: 0 },
+  show: {
+    y: 0,
+    opacity: 1,
+    transition: { type: "spring", duration: 1.25, delay: delay },
+  },
+});
+
+const textVariantdistort = (delay) => ({
+  initial: { y: -50, opacity: 0 },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      stiffness: 100,  // Adjust stiffness to control the bounce
+      damping: 20,
+      duration: 1.25,
+      delay: delay
+    },
+  },
+});
 
 const MusicPlayer = ({
   song,
@@ -145,6 +170,7 @@ const MusicPlayer = ({
     overflow: "hidden",
     display: "flex",
     justifyContent: "center",
+    position: "relative", 
     alignItems: "center",
     margin: "0 auto",
     animation: isPlaying ? "vibrate 0.5s infinite" : "none",
@@ -196,12 +222,33 @@ const MusicPlayer = ({
   };
 
   return (
+    <motion.div
+        variants={textVariant(0.8)}
+        initial="hidden"
+        animate="show"
+    >
     <div style={containerStyle}>
+      <motion.div
+        variants={textVariant(1.3)}
+        initial="hidden"
+        animate="show"
+      >
       <h2 style={titleStyle}>{song.title}</h2>
       <p style={artistStyle}>{song.artist}</p>
+      <motion.div
+          variants={textVariantdistort(1.7)}
+          initial="initial"
+          animate="animate"
+      >
       <div style={albumArtContainerStyle}>
-        <img src={song.albumArt} alt="Album Art" style={albumArtStyle} />
+          <img src={song.albumArt} alt="Album Art" style={albumArtStyle} />
       </div>
+      </motion.div>
+      <motion.div
+        variants={textVariant(2.0)}
+        initial="hidden"
+        animate="show"
+      >
       <div style={timeContainerStyle}>
         {(
           <span style={timeTextStyle}>
@@ -226,6 +273,12 @@ const MusicPlayer = ({
           </span>
         )}
       </div>
+      </motion.div>
+      <motion.div
+          variants={textVariantdistort(2.3)}
+          initial="initial"
+          animate="animate"
+      >
       <div style={buttonContainerStyle}>
         <button
           style={{ ...buttonStyle, fontSize: "1.5em" }}
@@ -258,8 +311,11 @@ const MusicPlayer = ({
           <FontAwesomeIcon icon={faStepForward} size="lg" />
         </button>
       </div>
+      </motion.div>
       <audio ref={audioRef} src={song.src} />
+      </motion.div>
     </div>
+    </motion.div>
   );
 };
 
@@ -396,6 +452,12 @@ const App = () => {
     }
   };
 
+  const bounce = useSpring({
+    from: { transform: 'translate3d(0, -180px, 0)' },
+    to: { transform: 'translate3d(0, 0, 0)' },
+    config: { tension: 150, friction: 3 },
+  });
+
   const appStyle = {
     background: "#f97316",
     display: "flex",
@@ -421,6 +483,7 @@ const App = () => {
   return (
     <div style={appStyle}>
       <div style={headerStyle}>
+      <animated.h1 style={bounce}>
         <Typewriter
           words={['Welcome to Bhakti Geet', 'Feel the Divine Vibes']}
           loop={true}
@@ -430,6 +493,7 @@ const App = () => {
           deleteSpeed={100}
           delaySpeed={1000}
         />
+        </animated.h1>
       </div>
       {songs.map((song, index) => (
         <MusicPlayer
