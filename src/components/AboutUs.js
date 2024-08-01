@@ -1,6 +1,32 @@
-
 import React, { useState, useEffect } from 'react';
 import image1 from './CodeAssets/krishnabg.png'; // Update this path to the uploaded image file
+import { motion } from "framer-motion";
+import { useSpring, animated } from '@react-spring/web';
+
+const textVariant = (delay) => ({
+  hidden: { y: -50, opacity: 0 },
+  show: {
+    y: 0,
+    opacity: 1,
+    transition: { type: "spring", duration: 1.25, delay: delay },
+  },
+});
+
+const textVariantdistort = (delay) => ({
+  initial: { y: -50, opacity: 0 },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      stiffness: 100,  // Adjust stiffness to control the bounce
+      damping: 20,
+      duration: 1.25,
+      delay: delay
+    },
+  },
+});
+
 
 function AboutUs() {
   const [isHovered, setIsHovered] = useState(false);
@@ -126,10 +152,23 @@ function AboutUs() {
     e.target.style.transform = 'scale(1)';
   };
 
+  const bounce = useSpring({
+    from: { transform: 'translate3d(0, -180px, 0)' },
+    to: { transform: 'translate3d(0, 0, 0)' },
+    config: { tension: 150, friction: 5.5 },
+  });
+  const bounce2delay = useSpring({
+    from: { transform: 'translate3d(0, -200px, 0)' },
+    to: { transform: 'translate3d(0, 0, 0)' },
+    config: { tension: 150, friction: 5.5 },
+    delay: 50, // in milliseconds
+  });
+  
   return (
     <div style={MainSectionStyle}>
       <div style={aboutSectionStyle}>
         <div style={imageContainerStyle}>
+        <animated.h1 style={bounce}>
           <img
             src={image1}
             alt="About Us"
@@ -137,43 +176,97 @@ function AboutUs() {
             onMouseOver={() => setIsHovered(true)}
             onMouseOut={() => setIsHovered(false)}
           />
+        </animated.h1>
         </div>
         <div style={textContainerStyle}>
-          <h2 style={headingStyle}>About Us</h2>
+          <animated.h1 style={bounce}>
+            <h2 style={headingStyle}>About Us</h2>
+          </animated.h1>
+          <animated.h1 style={bounce2delay}>
           <p style={pStyle}>
             Welcome to Vedic Vani, your gateway to the profound teachings of the Bhagavad Gita, Chronicle, and Bhakti geet. We are dedicated to preserving and sharing the timeless wisdom found in their chapters, shlokas, and verses. Vedic Vani serves as a digital haven for those seeking enlightenment and a deeper understanding of life's fundamental principles. By relating these teachings to Hindu mythology and referencing revered texts, we make ancient knowledge accessible and relevant for modern seekers. Join us on this spiritual journey.
           </p>
-
-          <a
-            href="https://github.com/UjjwalSaini07"
-            style={linkStyle}
-            onMouseOver={onMouseOver}
-            onMouseOut={onMouseOut}
+          </animated.h1>
+          <motion.div
+            variants={textVariant(0.75)}
+            initial="hidden"
+            animate="show"
           >
-            - Made By Ujjwal Saini ❣️
-          </a>
+            <a
+              href="https://github.com/UjjwalSaini07"
+              style={linkStyle}
+              onMouseOver={onMouseOver}
+              onMouseOut={onMouseOut}
+            >
+              - Made By Ujjwal Saini ❣️
+            </a>
+          </motion.div>
         </div>
       </div>
+
+      <motion.div
+        variants={textVariantdistort(1.0)}
+        initial="hidden"
+        animate="show"
+      >
       <div style={infoMainCardsStyle}>
         <div style={infoCardStyle}>
+          <motion.div
+            variants={textVariantdistort(2.18)}
+            initial="initial"
+            animate="animate"
+          >
           <h3 style={headingStyle}>Our Mission</h3>
-          <p>
-            At Vedic Vani, our mission is to make the spiritual teachings of the Bhagavad Gita accessible to everyone, regardless of their background or beliefs. We strive to bridge the gap between the ancient wisdom of the Gita and the modern world, fostering a greater appreciation for its universal truths and life-changing lessons.
-          </p>
+          </motion.div>
+          <motion.div
+            variants={textVariant(2.48)}
+            initial="hidden"
+            animate="show"
+          >
+            <p>
+              At Vedic Vani, our mission is to make the spiritual teachings of the Bhagavad Gita accessible to everyone, regardless of their background or beliefs. We strive to bridge the gap between the ancient wisdom of the Gita and the modern world, fostering a greater appreciation for its universal truths and life-changing lessons.
+            </p>
+          </motion.div>
         </div>
+        
         <div style={infoCardStyle}>
+          <motion.div
+            variants={textVariantdistort(2.69)}
+            initial="initial"
+            animate="animate"
+          >
           <h3 style={headingStyle}>Selfless duty and devotion</h3>
-          <p>
-            The Bhagavad Gita offers profound insights into life, duty, and spirituality. It emphasizes selfless action, knowledge, devotion to God, understanding one's dharma, detachment, and inner peace through meditation and self-discipline. It encourages living a righteous and spiritually wise life.
-          </p>
+          </motion.div>
+          <motion.div
+            variants={textVariant(2.86)}
+            initial="hidden"
+            animate="show"
+          >
+            <p>
+              The Bhagavad Gita offers profound insights into life, duty, and spirituality. It emphasizes selfless action, knowledge, devotion to God, understanding one's dharma, detachment, and inner peace through meditation and self-discipline. It encourages living a righteous and spiritually wise life.
+            </p>
+          </motion.div>
         </div>
         <div style={infoCardStyle}>
+          <motion.div
+            variants={textVariantdistort(3.04)}
+            initial="initial"
+            animate="animate"
+          >
           <h3 style={headingStyle}>Importance of Gita</h3>
-          <p>
-            The Bhagavad Gita, an ancient Hindu scripture, offers timeless guidance on duty and spiritual devotion. In 700 verses, it provides profound insights into life's purpose, serving as a spiritual compass for seekers, inspiring them towards self-realization, inner peace, and enlightenment.
-          </p>
+          </motion.div>
+          <motion.div
+            variants={textVariant(3.32)}
+            initial="hidden"
+            animate="show"
+          >
+            <p>
+              The Bhagavad Gita, an ancient Hindu scripture, offers timeless guidance on duty and spiritual devotion. In 700 verses, it provides profound insights into life's purpose, serving as a spiritual compass for seekers, inspiring them towards self-realization, inner peace, and enlightenment.
+            </p>
+          </motion.div>
         </div>
       </div>
+      </motion.div>
     </div>
   );
 }
