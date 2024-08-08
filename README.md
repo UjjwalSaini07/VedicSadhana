@@ -139,7 +139,7 @@ To run tests, run the following command
 If you have any feedback, please reach out to us at ujjwalsaini0007+Vedicgit@gmail.com
 <p align="left">
     <span>Show Some Love</span>
-    <span>❤️</span>
+    <img src="https://i.pinimg.com/originals/ca/97/bd/ca97bde328433c2497b154afdee5f8d7.gif" alt="Heart Icon" style="width: 18px; height: 19px;margin-top: 2px; vertical-align: middle;" />
     <span>by Starring the repo and Share this product! </span>
     <img src="https://github.com/user-attachments/assets/059ee3d9-d8ea-4b9a-986d-c9c8e9f47f40" alt="Animation - 1723091871778" style="vertical-align:middle; margin-left: 5px; margin-top: -14px;" />
 </p>
