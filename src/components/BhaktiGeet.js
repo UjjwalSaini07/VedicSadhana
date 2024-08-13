@@ -25,6 +25,10 @@ import song13 from "./BhaktiGeetAssets/Audios/Audio13_RamSiyaRam.mp3";
 import song14 from "./BhaktiGeetAssets/Audios/Audio14_Hanuman.mp3";
 import song15 from "./BhaktiGeetAssets/Audios/Audio15_Sundarkand.mp3";
 import song16 from "./BhaktiGeetAssets/Audios/Audio16_ShivaRudra.mp3";
+import song17 from "./BhaktiGeetAssets/Audios/Audio17_MataRani2.mp3";
+import song18 from "./BhaktiGeetAssets/Audios/Audio18_NirvanaShatkam.mp3";
+import song19 from "./BhaktiGeetAssets/Audios/Audio19_PanchaksharStotra.mp3";
+import song20 from "./BhaktiGeetAssets/Audios/Audio20_ShivTandavStotram.mp3";
 
 //Import all Images Here
 import img1 from "./BhaktiGeetAssets/Images/Img1.jpg";
@@ -43,6 +47,10 @@ import img13 from "./BhaktiGeetAssets/Images/Img13_1.png";
 import img14 from "./BhaktiGeetAssets/Images/Img14.png";
 import img15 from "./BhaktiGeetAssets/Images/Img15.png";
 import img16 from "./BhaktiGeetAssets/Images/Img16.jpg";
+import img17 from "./BhaktiGeetAssets/Images/Img17_1.png";
+import img18 from "./BhaktiGeetAssets/Images/Img18.png";
+import img19 from "./BhaktiGeetAssets/Images/Img19.png";
+import img20 from "./BhaktiGeetAssets/Images/Img20.png";
 
 
 const isMobile = window.innerWidth <= 768;
@@ -395,6 +403,12 @@ const songs = [
     src: song10,
   },
   {
+    title: "Mata Bhajan 2",
+    artist: "Gulshan Kumar",
+    albumArt: img17,
+    src: song17,
+  },
+  {
     title: "Shreeman Narayan",
     artist: "Studio Sangeeta",
     albumArt: img11,
@@ -411,6 +425,24 @@ const songs = [
     artist: "Religious India",
     albumArt: img16,
     src: song16,
+  },
+  {
+    title: "श्री निर्वाण षट्कम:",
+    artist: "Religious India",
+    albumArt: img18,
+    src: song18,
+  },
+  {
+    title: "श्री शिव पंचाक्षर",
+    artist: "Religious India",
+    albumArt: img19,
+    src: song19,
+  },
+  {
+    title: "श्री शिव तांडव स्तोत्र",
+    artist: "Shankar Mahadevan",
+    albumArt: img20,
+    src: song20,
   },
   {
     title: "Ram Siya Ram",
