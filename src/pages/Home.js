@@ -47,18 +47,18 @@ function Home() {
   }, []);
 
   return (
-    <section className="min-h-screen flex flex-col items-center p-4">
-      <div className="w-full flex justify-center items-center mb-8">
+    <section className="min-h-screen flex flex-col items-center p-2">
+      <div className="w-full flex justify-center items-center mb-2">
         <img className="opacity-80 w-full max-w-xl" src={krishna} alt="krishna" style={{ animation: "float 2s ease-in-out infinite" }} />
       </div>
-      <div className="relative mb-8">
+      <div className="relative mb-2">
         <img data-aos="fade-right" className="backdrop-opacity-1 absolute w-[28rem] max-w-full top-2 left-[12%] transform -translate-x-1/2" src={logounder} alt="logo" />
         <p className="text-5xl font-[Alegreya] text-center">VedicVani</p>
-        <AudioPlayer className="invisible" loop autoPlay src={song} volume={6.7} />
+        <AudioPlayer className="invisible" loop autoPlay src={song} volume={7} />
       </div>
 
       <div data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="500">
-        <div className="flex flex-col md:flex-row justify-center items-center w-full max-w-xl mx-auto mb-8 gap-4">
+        <div className="flex flex-col md:flex-row justify-center items-center w-full max-w-xl mx-auto mb-4 gap-4">
           <form className="w-full flex flex-col md:flex-row justify-evenly items-center gap-4">
             <div className="relative mt-4 w-full">
               <select
