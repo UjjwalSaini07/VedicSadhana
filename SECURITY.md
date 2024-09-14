@@ -6,6 +6,7 @@ This section provides information about the versions of our project that are cur
 
 | Version | Supported          |
 | ------- | ------------------ |
+| v1.1    | :white_check_mark: |
 | v1.0    | :white_check_mark: |
 
 ## Reporting a Vulnerability
