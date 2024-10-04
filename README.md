@@ -63,9 +63,6 @@ Explore the timeless wisdom of the Bhagavad Gita with in-depth shlokas, translat
 - But API is Not Required If U follow Installation Process
 <!--| `api_key` | `string` | **Required**. Your API key |-->
 
-
-
-
 ## How To Build:
 
 Prerequisites
