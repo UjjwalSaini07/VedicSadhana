@@ -72,7 +72,6 @@ Ensure you have the following software installed on your computer:
 - npm
 - Code Editor
 
-
 ## Installation
 
 Backend: Starting NodeJS Server
@@ -91,7 +90,6 @@ Backend: Starting NodeJS Server
 ```bash
   node index.js
 ```
-
     
 ## Deployment
 
