@@ -70,6 +70,7 @@ Ensure you have the following software installed on your computer:
 
 - Node.js
 - npm
+- Git
 - Code Editor
 
 ## Installation
@@ -138,7 +139,7 @@ To run tests, run the following command
 
 ## Feedback
 
-If you have any feedback, please reach out to us at ujjwalsaini0007+Vedicgit@gmail.com
+If you have any feedback, please reach out to us at [Mail](ujjwalsaini0007+Vedicgit@gmail.com)
 <p align="left">
     <span>Show Some Love</span>
     <img src="https://i.pinimg.com/originals/ca/97/bd/ca97bde328433c2497b154afdee5f8d7.gif" alt="Heart Icon" style="width: 18px; height: 19px;margin-top: 2px; vertical-align: middle;" />
