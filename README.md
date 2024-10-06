@@ -9,7 +9,7 @@ Explore the timeless wisdom of the Bhagavad Gita with in-depth shlokas, translat
 [![Generic badge](https://img.shields.io/badge/Owner-@Ujjwal-<COLOR>.svg)](https://github.com/UjjwalSaini07)
 [![GitHub stars](https://img.shields.io/github/stars/UjjwalSaini07/VedicSadhana?style=social&label=Star&maxAge=2592000)](https://github.com/UjjwalSaini07/VedicSadhana)
 
-# Github Stats:
+# Github Stats
 
 <div align = "center">
 
@@ -37,7 +37,7 @@ Explore the timeless wisdom of the Bhagavad Gita with in-depth shlokas, translat
 </table>
 </div>
 
-# Data source:
+# Data source
 - Data For This Project is Get From https://github.com/vedicscriptures/bhagavad-gita-data this repository.
 - just Download This Data In Your computer and Put It Inside `/Data/bhagavad-gita-data` this Folder
 - Special Thanx to - https://github.com/PtPrashantTripathi
@@ -63,7 +63,7 @@ Explore the timeless wisdom of the Bhagavad Gita with in-depth shlokas, translat
 - But API is Not Required If U follow Installation Process
 <!--| `api_key` | `string` | **Required**. Your API key |-->
 
-## How To Build:
+## How To Build
 
 Prerequisites
 Ensure you have the following software installed on your computer:
