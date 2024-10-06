@@ -40,7 +40,7 @@ Explore the timeless wisdom of the Bhagavad Gita with in-depth shlokas, translat
 # Data source
 - Data For This Project is Get From https://github.com/vedicscriptures/bhagavad-gita-data this repository.
 - Just Download this Data in your computer and Put It Inside `/Data/bhagavad-gita-data` this Folder.
-- Special Thanx to - https://github.com/PtPrashantTripathi
+- Special Thanx to - [PtPrashantTripathi](https://github.com/PtPrashantTripathi)
 
 ## API Reference
 
