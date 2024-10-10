@@ -123,3 +123,108 @@ function Home() {
 }
 
 export default Home;
+
+
+// TOdo: This is Optimised Code but their is problem in this of Data Fetching
+// import React, { useState, useEffect } from "react";
+// import { Link } from "react-router-dom";
+// import krishna from "../components/CodeAssets/krishnabg.png";
+// import logounder from "../components/CodeAssets/LogoUnder.png";
+// import song from '../components/FluteTunes/krishnaflute.mp3';
+// import AOS from 'aos';
+// import { AudioPlayer } from 'react-audio-play';
+// import './home.css';
+
+// function Home() {
+//   const [selectedChap, setSelectedChap] = useState(1);
+//   const [selectedVers, setSelectedVers] = useState(1);
+//   const [verseOptions, setVerseOptions] = useState([]);
+
+//   useEffect(() => {
+//     const fetchVerses = async () => {
+//       try {
+//         const response = await fetch(`https://vedicvani-backend.onrender.com/api/chapter/${selectedChap}`);
+//         const data = await response.json();
+//         const options = Array.from({ length: data.verses_count }, (_, i) => (
+//           <option key={i} value={i + 1}>
+//             Shlok {i + 1}
+//           </option>
+//         ));
+//         setVerseOptions(options);
+//       } catch (error) {
+//         console.error('Error fetching verses:', error);
+//       }
+//     };
+//     fetchVerses();
+//   }, [selectedChap]);
+
+//   useEffect(() => {
+//     AOS.init({ duration: 1000 });
+//   }, []);
+
+//   return (
+//     <section className="min-h-screen flex flex-col items-center p-2">
+//       <div className="w-full flex justify-center items-center mb-2">
+//         <img className="opacity-80 w-full max-w-xl" src={krishna} alt="krishna" style={{ animation: "float 2s ease-in-out infinite" }} />
+//       </div>
+
+//       <div className="relative mb-2">
+//         <img data-aos="fade-right" className="backdrop-opacity-1 absolute w-[28rem] max-w-full top-2 left-[12%] transform -translate-x-1/2" src={logounder} alt="logo" />
+//         <p className="text-5xl font-[Alegreya] text-center">VedicVani</p>
+//         <AudioPlayer className="invisible" loop autoPlay src={song} volume={7} />
+//       </div>
+
+//       <div data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="500">
+//         <form className="w-full flex flex-col md:flex-row justify-evenly items-center gap-4 max-w-xl mx-auto mb-4">
+//           <div className="relative mt-4 w-full">
+//             <select
+//               className="custom-dropdown w-full md:w-72 h-12 rounded-lg pl-4 text-lg bg-orange-200 border-2 border-orange-400 text-orange-800 hover:bg-orange-300 focus:outline-none focus:ring-2 focus:ring-orange-500"
+//               name="chap"
+//               onChange={(e) => setSelectedChap(e.target.value)}
+//               value={selectedChap}
+//             >
+//               {[...Array(18).keys()].map(i => (
+//                 <option key={i + 1} value={i + 1}>
+//                   Chapter {i + 1}
+//                 </option>
+//               ))}
+//             </select>
+//           </div>
+
+//           <div className="relative mt-4 w-full">
+//             <select
+//               className="w-full md:w-72 h-12 rounded-lg pl-4 text-lg bg-orange-200 border-2 border-orange-400 text-orange-800 hover:bg-orange-300 focus:outline-none focus:ring-2 focus:ring-orange-500"
+//               name="verse"
+//               onChange={(e) => setSelectedVers(e.target.value)}
+//               value={selectedVers}
+//             >
+//               {verseOptions}
+//             </select>
+//           </div>
+
+//           <Link to={`/api/chapter/${selectedChap}/shlok/${selectedVers}`} className="go-button-container">
+//             <button className="go-button bg-[#002147] text-[#F2F3F4] font-[Alegreya] text-2xl rounded-lg w-full md:w-24 px-4 py-2 duration-300 hover:bg-[#F2F3F4] hover:text-[#002147] hover:shadow-md hover:shadow-orange-900">
+//               Go
+//             </button>
+//           </Link>
+//         </form>
+
+//         <div className="flex flex-col md:flex-row justify-center items-center w-full gap-4 mb-16">
+//           <Link to={`/api/chapter/1/shlok/1`} className="w-full md:w-auto">
+//             <button className="read-shlok-button bg-[#002147] text-[#F2F3F4] font-[Alegreya] text-2xl rounded-lg w-full px-3 py-3 duration-300 hover:bg-[#F2F3F4] hover:text-[#002147] hover:shadow-md hover:shadow-orange-900">
+//               Read Shlok's
+//             </button>
+//           </Link>
+//           <Link to={`/api/chapter/1`} className="w-full md:w-auto">
+//             <button className="chapter-summary-button bg-[#002147] text-[#F2F3F4] font-[Alegreya] text-2xl rounded-lg w-full px-2 py-3 duration-300 hover:bg-[#F2F3F4] hover:text-[#002147] hover:shadow-md hover:shadow-orange-900">
+//               Chapter's Summary
+//             </button>
+//           </Link>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
+
+// export default Home;
+
