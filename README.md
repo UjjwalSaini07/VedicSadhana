@@ -7,7 +7,7 @@ Explore the timeless wisdom of the Bhagavad Gita with in-depth shlokas, translat
 [![GitHub contributors](https://img.shields.io/github/contributors/UjjwalSaini07/VedicSadhana)](https://github.com/UjjwalSaini07/VedicSadhana)
 [![GitHub latest commit](https://badgen.net/github/last-commit/UjjwalSaini07/VedicSadhana)](https://github.com/UjjwalSaini07/VedicSadhana)
 [![Generic badge](https://img.shields.io/badge/Owner-@Ujjwal-<COLOR>.svg)](https://github.com/UjjwalSaini07)
-[![GitHub stars](https://img.shields.io/github/stars/UjjwalSaini07/VedicSadhana?style=social&label=Star&maxAge=2592000)](https://github.com/UjjwalSaini07/VedicSadhana)
+[![GitHub stars](https://img.shields.io/github/stars/UjjwalSaini07/VedicSadhana?style=social&label=Star&maxAge=2592100)](https://github.com/UjjwalSaini07/VedicSadhana)
 
 # Github Stats
 
