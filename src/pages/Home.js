@@ -121,10 +121,8 @@ function Home() {
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center w-full gap-4 mb-8">
           <SweetEmailPusher/>
+          {/* <EmailPusher/> */}
         </div>
-        {/* <div className="flex flex-col md:flex-row justify-center items-center w-full gap-4 mb-8">
-          <EmailPusher/>
-        </div> */}
       </div>
     </section>
   );
