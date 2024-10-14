@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import AOS from 'aos';
+
+import './home.css';
+// import EmailPusher from './EmailPusher';
+import { AudioPlayer } from 'react-audio-play';
+import SweetEmailPusher from './SweetEmail';
+import song from '../components/FluteTunes/krishnaflute.mp3';
 import krishna from "../components/CodeAssets/krishnabg.png";
 import logounder from "../components/CodeAssets/LogoUnder.png";
-import { Link } from "react-router-dom";
-import './home.css';
-import { AudioPlayer } from 'react-audio-play';
-import song from '../components/FluteTunes/krishnaflute.mp3';
-import AOS from 'aos';
 
 function Home() {
   const [selectedchap, setSelectedchap] = useState(1);
@@ -62,7 +65,7 @@ function Home() {
           <form className="w-full flex flex-col md:flex-row justify-evenly items-center gap-4">
             <div className="relative mt-4 w-full">
               <select
-                className="custom-dropdown w-full md:w-72 h-12 z-10 rounded-lg pl-4 text-lg bg-orange-200 border-2 border-orange-400 text-orange-800 hover:bg-orange-300 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 appearance-none"
+                className="custom-dropdown w-80 md:w-72 h-12 z-10 rounded-lg pl-4 text-lg bg-orange-200 border-2 border-orange-400 text-orange-800 hover:bg-orange-300 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 appearance-none"
                 name="chap"
                 id="chap"
                 onChange={handleChangechap}
@@ -91,7 +94,7 @@ function Home() {
 
             <div className="relative mt-4 w-full">
               <select
-                className="w-full md:w-72 h-12 z-10 rounded-lg pl-4 text-lg bg-orange-200 border-2 border-orange-400 text-orange-800 hover:bg-orange-300 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 appearance-none"
+                className="w-80 md:w-72 h-12 z-10 rounded-lg pl-4 text-lg bg-orange-200 border-2 border-orange-400 text-orange-800 hover:bg-orange-300 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 appearance-none"
                 name="verse"
                 id="verse"
                 onChange={handleChangevers}
@@ -103,20 +106,23 @@ function Home() {
 
             <div className="go-button-container">
               <Link to={`/api/chapter/${selectedchap}/shlok/${selectedcvers}`}>
-                <button className="go-button bg-[#002147] text-[#F2F3F4] font-[Alegreya] text-2xl rounded-lg w-full md:w-24 px-4 py-2 duration-300 hover:bg-[#F2F3F4] hover:text-[#002147] hover:shadow-md hover:shadow-orange-900">Go</button>
+                <button className="go-button bg-[#002147] text-[#F2F3F4] font-[Alegreya] text-2xl rounded-lg w-35 md:w-24 px-4 py-2 duration-300 hover:bg-[#F2F3F4] hover:text-[#002147] hover:shadow-md hover:shadow-orange-900">Go</button>
               </Link>
             </div>
           </form>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center w-full gap-4 mb-16">
           <Link to={`/api/chapter/1/shlok/1`} className="w-full md:w-auto">
-            <button className="read-shlok-button bg-[#002147] text-[#F2F3F4] font-[Alegreya] text-2xl rounded-lg w-full px-3 py-3 duration-300 hover:bg-[#F2F3F4] hover:text-[#002147] hover:shadow-md hover:shadow-orange-900">Read Shlok's</button>
+            <button className="read-shlok-button bg-[#002147] text-[#F2F3F4] font-[Alegreya] text-2xl rounded-lg w-52 md:w-full px-3 py-3 duration-300 hover:bg-[#F2F3F4] hover:text-[#002147] hover:shadow-md hover:shadow-orange-900">Read Shlok's</button>
           </Link>
           <Link to={`/api/chapter/1`} className="w-full md:w-auto">
-            <button className="chapter-summary-button bg-[#002147] text-[#F2F3F4] font-[Alegreya] text-2xl rounded-lg w-full px-2 py-3 duration-300 hover:bg-[#F2F3F4] hover:text-[#002147] hover:shadow-md hover:shadow-orange-900">Chapter's Summary</button>
+            <button className="chapter-summary-button bg-[#002147] text-[#F2F3F4] font-[Alegreya] text-2xl rounded-lg w-52 md:w-full px-2 py-3 duration-300 hover:bg-[#F2F3F4] hover:text-[#002147] hover:shadow-md hover:shadow-orange-900">Chapter's Summary</button>
           </Link>
         </div>
-
+        <div className="flex flex-col md:flex-row justify-center items-center w-full gap-4 mb-8">
+          <SweetEmailPusher/>
+          {/* <EmailPusher/> */}
+        </div>
       </div>
     </section>
   );
