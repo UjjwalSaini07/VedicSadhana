@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import AOS from 'aos';
 
 import './home.css';
-import EmailPusher from './EmailPusher';
+// import EmailPusher from './EmailPusher';
 import { AudioPlayer } from 'react-audio-play';
 import SweetEmailPusher from './SweetEmail';
 import song from '../components/FluteTunes/krishnaflute.mp3';
