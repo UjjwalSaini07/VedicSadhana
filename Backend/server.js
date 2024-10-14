@@ -2,6 +2,7 @@ const express = require('express');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+require("dotenv").config()
 
 const app = express();
 const PORT = 5000; // You can change the port if needed
@@ -13,8 +14,8 @@ app.use(bodyParser.json());
 const transporter = nodemailer.createTransport({
   service: 'gmail', // You can use another service like SendGrid or SMTP
   auth: {
-    user: 'saini.ujjwals007@gmail.com', 
-    pass: 'pnot bnpc cfwp wnyx',
+    user: process.env.EMAIL_USER, 
+    pass: process.env.EMAIL_PASS,
   },
 });
 
@@ -58,6 +59,9 @@ We are excited to have you with us on this path of spiritual growth!`
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
+
+export default app;
+
 
 // TOdo: Basic Code with only post request not having Get Request
 // const express = require('express');

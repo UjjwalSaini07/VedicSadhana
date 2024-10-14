@@ -15,8 +15,9 @@ const EmailPusher = () => {
 
       if (email) {
         // Make POST request to send email
-        const response = await fetch('http://localhost:5000/send-email', { // Update the URL if needed
-          method: 'POST',
+        // const response = await fetch('http://localhost:5000/send-email', {
+        const response = await fetch('https://vedic-vani-backend.vercel.app/send-email', {
+          method: 'POST', 
           headers: {
             'Content-Type': 'application/json',
           },
