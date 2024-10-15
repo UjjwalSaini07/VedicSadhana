@@ -27,7 +27,20 @@ const EmailPusher = () => {
         const result = await response.json();
 
         if (response.ok) {
-          Swal.fire(`Entered Email: ${email}`, result.message, 'success');
+          Swal.fire({
+            title: "Did u Receive any Confirmation Email?",
+            showDenyButton: true,
+            showCancelButton: false,
+            confirmButtonText: "YES",
+            denyButtonText: `NO`
+          }).then((result) => {
+            if (result.isConfirmed) {
+              // Swal.fire("Oh Thats Great!", "", "success");
+              Swal.fire(`Entered Email: ${email}`, result.message, 'success');
+            } else if (result.isDenied) {
+              Swal.fire("Please Again Subscribe with Proper Email ID", "", "info");
+            }
+          });
         } else {
           Swal.fire("Failed to send email: " + result.message);
         }
