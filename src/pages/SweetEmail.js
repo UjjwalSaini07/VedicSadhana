@@ -59,7 +59,7 @@ const EmailPusher = () => {
               });
               // Second API call to Google Apps Script endpoint: /submit-to-google
               try {
-                const googleApiResponse = await fetch('http://localhost:5000/submit-to-google', {
+                const googleApiResponse = await fetch('https://vedic-vani-backend.vercel.app/submit-to-google', {
                   method: 'POST',
                   headers: {
                     'Content-Type': 'application/json', // Ensure the correct Content-Type header
