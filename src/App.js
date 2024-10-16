@@ -33,13 +33,13 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/api/chapter/:chap/shlok/:ver" element={<Homeque />} />
             <Route path="/api/chapter/:chap" element={<Chapters />} />
-            {/* <Route path="/api/resources" element={<Resources />} /> */}
-            {/* <Route path="/api/BhaktiGeet" element={<BhaktiGeet />} /> */}
+            <Route path="/api/resources" element={<Resources />} />
+            <Route path="/api/BhaktiGeet" element={<BhaktiGeet />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/api/aboutus" element={<AboutUs />} />
-            {/* <Route path="/api/Mahabharat_carousel" element={<MahabharatCarousel />} /> */}
-            {/* <Route path="/api/Ramayana_carousel" element={<RamayanaCarousel />} /> */}
-            {/* <Route path='/api/chronicle' element={<Chronicle/>}/> */}
+            <Route path="/api/Mahabharat_carousel" element={<MahabharatCarousel />} />
+            <Route path="/api/Ramayana_carousel" element={<RamayanaCarousel />} />
+            <Route path='/api/chronicle' element={<Chronicle/>}/>
           </Route>
           <Route path="*" element={<h1>404 Not Found</h1>} />
         </Routes>
