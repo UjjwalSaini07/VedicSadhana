@@ -27,7 +27,6 @@ const textVariantdistort = (delay) => ({
   },
 });
 
-
 function AboutUs() {
   const [isHovered, setIsHovered] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -36,6 +35,8 @@ function AboutUs() {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
     };
+     
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 
     handleResize();
     window.addEventListener('resize', handleResize);

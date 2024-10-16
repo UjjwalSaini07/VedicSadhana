@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import ReactAudioPlayer from 'react-audio-player';
 import Ramayana from "./Carousel_Images/CoverImages/Ramayana_Image.jpg";
@@ -62,6 +62,10 @@ const Chronicle = () => {
         to: { transform: 'translate3d(0, 0, 0)' },
         config: { tension: 150, friction: 6.8 },
     });
+
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, []);
 
     return (
         <div>

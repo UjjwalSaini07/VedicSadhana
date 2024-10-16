@@ -15,6 +15,8 @@ function Home() {
   const [verseOptions, setVerseOptions] = useState([]);
 
   useEffect(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+
     async function fetchData() {
       try {
         const req = await fetch(

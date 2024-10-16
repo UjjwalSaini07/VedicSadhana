@@ -16,6 +16,8 @@ const textVariant = (delay) => ({
 
 const Contact = () => {
   useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
     const script = document.createElement('script');
     script.src = "https://static-bundles.visme.co/forms/vismeforms-embed.js";
     script.async = true;
