@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Typewriter } from "react-simple-typewriter";
 import { motion } from "framer-motion";
 
@@ -179,7 +179,9 @@ const headerStyle = {
 };
 
 const Resources = () => {
-  
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
   return (
     <div style={appStyle}>
       <div style={headerStyle} className="hidden sm:block">

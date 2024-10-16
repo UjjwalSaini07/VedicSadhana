@@ -512,6 +512,10 @@ const App = () => {
     fontWeight: "450",
   };
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+
   return (
     <div style={appStyle}>
       <div style={headerStyle}>

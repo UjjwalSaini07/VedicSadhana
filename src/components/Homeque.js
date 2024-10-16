@@ -38,6 +38,9 @@ const Homeque = () => {
   }, [fetchVoices]);
 
   useEffect(() => {
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
     const fetchData = async () => {
       const urlParts = location.pathname.split("/");
       const newChap = parseInt(urlParts[urlParts.indexOf("chapter") + 1]);

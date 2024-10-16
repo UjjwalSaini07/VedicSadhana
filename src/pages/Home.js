@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import AOS from 'aos';
 
 import './home.css';
-// import EmailPusher from './EmailPusher';
 import { AudioPlayer } from 'react-audio-play';
 import SweetEmailPusher from './SweetEmail';
 import song from '../components/FluteTunes/krishnaflute.mp3';
@@ -16,6 +15,8 @@ function Home() {
   const [verseOptions, setVerseOptions] = useState([]);
 
   useEffect(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+
     async function fetchData() {
       try {
         const req = await fetch(
@@ -116,12 +117,11 @@ function Home() {
             <button className="read-shlok-button bg-[#002147] text-[#F2F3F4] font-[Alegreya] text-2xl rounded-lg w-52 md:w-full px-3 py-3 duration-300 hover:bg-[#F2F3F4] hover:text-[#002147] hover:shadow-md hover:shadow-orange-900">Read Shlok's</button>
           </Link>
           <Link to={`/api/chapter/1`} className="w-full md:w-auto">
-            <button className="chapter-summary-button bg-[#002147] text-[#F2F3F4] font-[Alegreya] text-2xl rounded-lg w-52 md:w-full px-2 py-3 duration-300 hover:bg-[#F2F3F4] hover:text-[#002147] hover:shadow-md hover:shadow-orange-900">Chapter's Summary</button>
+            <button className="chapter-summary-button bg-[#002147] text-[#F2F3F4] font-[Alegreya] text-2xl rounded-lg w-52 md:w-full mb-0 px-2 py-3 duration-300 hover:bg-[#F2F3F4] hover:text-[#002147] hover:shadow-md hover:shadow-orange-900">Chapter's Summary</button>
           </Link>
         </div>
-        <div className="flex flex-col md:flex-row justify-center items-center w-full gap-4 mb-8">
+        <div className="flex flex-col md:flex-row justify-center items-center w-full gap-4 mb-5 md:mb-8">
           <SweetEmailPusher/>
-          {/* <EmailPusher/> */}
         </div>
       </div>
     </section>
