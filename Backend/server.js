@@ -65,12 +65,11 @@ app.post('/submit-to-google', async (req, res) => {
   }
 
   try {
-    const googleFormData = new URLSearchParams();
-    googleFormData.append('email', email);
-
-    const googleApiResponse = await axios.post('https://script.google.com/macros/s/AKfycbxBtwPmMCVNgydtEF3GWwgKQUC0R3Fmzn9k5ecg5OC8Nj5IOll6OKvYACixwhDwVizN/exec', googleFormData, {
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
-    });
+      const googleApiResponse = await axios.post('https://script.google.com/macros/s/AKfycbxBtwPmMCVNgydtEF3GWwgKQUC0R3Fmzn9k5ecg5OC8Nj5IOll6OKvYACixwhDwVizN/exec', {
+        email: email
+      }, {
+        headers: { 'Content-Type': 'application/json' }  // You can enable headers here if needed
+      });  
 
     if (googleApiResponse.status !== 200) {
       console.error("Google API Error: ", googleApiResponse.data);
