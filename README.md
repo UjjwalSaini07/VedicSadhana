@@ -60,7 +60,7 @@ Explore the timeless wisdom of the Bhagavad Gita with in-depth shlokas, translat
 | `GET /chapters` | `FREE` | **FREE To Use**. |
 | `GET /chapter/:ch` | `FREE` | **FREE To Use**. |
 
-- But API is Not Required If you follow Installation Process.
+- But API linking is not Required in localHost, If you follow Installation Process.
 <!--| `api_key` | `string` | **Required**. Your API key |-->
 
 ## How To Build
