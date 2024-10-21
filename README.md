@@ -9,7 +9,7 @@ Explore the timeless wisdom of the Bhagavad Gita with in-depth shlokas, translat
 [![Generic badge](https://img.shields.io/badge/Owner-@Ujjwal-<COLOR>.svg)](https://github.com/UjjwalSaini07)
 [![GitHub stars](https://img.shields.io/github/stars/UjjwalSaini07/VedicSadhana?style=social&label=Star&maxAge=2592100)](https://github.com/UjjwalSaini07/VedicSadhana)
 
-# Github Stats:
+# Github Stats
 
 <div align = "center">
 
