@@ -4,14 +4,16 @@ Thank you for your interest in contributing to the Vedic Sadhana project! We wel
 
 ## How to Contribute
 
-### 1. Fork the Repository
-Start by forking the repository to your GitHub account. This will create your own copy of the project where you can make changes.
+### 1. Star the Repository
+Start the Contributing Journey with Staring the Repository [Main repository](https://github.com/UjjwalSaini07/VedicSadhana) first, which shows your interest in this Project, which also help us to increase our network.
 
-### 2. Star the Repository
-Star the [Main repository](https://github.com/UjjwalSaini07/VedicSadhana), which help to increase our network.
+### 2. Fork the Repository
+Start by forking the repository to your GitHub account. This will create your own copy of the project where you can make changes.
 
 ### 3. Clone the Repository
 Clone the forked repository to your local machine using the following command:
+
+Use HTTP Method for Cloning
 
 ```bash
 git clone https://github.com/your-username/vedic-sadhana.git
@@ -47,7 +49,7 @@ git push origin feature/your-feature-name
 Submit a pull request (PR) from your branch to the main branch of the original repository. In your PR description, explain what changes you made and why. **Make sure to reference any related issues and make sure to give Image Refernce for the change in your PR description.**
 
 ### 9. Review Process
-Your pull request will be reviewed by the project maintainers. They may ask for changes or provide feedback. Please be responsive and address any comments to get your PR merged.
+Your pull request will be reviewed by the [Project Maintainer](https://github.com/UjjwalSaini07). They may ask for changes or provide feedback in term of PR review. Please be responsive and address any comments to get your PR merged.
 
 ### 10. Code of Conduct
 Please follow our [Code of Conduct](https://github.com/UjjwalSaini07/VedicSadhana/blob/main/CODE_OF_CONDUCT.md) in all your interactions with the project.
