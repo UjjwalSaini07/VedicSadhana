@@ -3,7 +3,6 @@ import './style.css'
 import preimage from './CodeAssets/LogoUnder.png'
 import AOS from 'aos';
 
-
 function Preloader() {
   useEffect(() => {
     AOS.init({duration: 1000});

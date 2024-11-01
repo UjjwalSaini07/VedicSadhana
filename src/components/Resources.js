@@ -48,7 +48,6 @@ const textVariantdistort = (delay) => ({
   },
 });
 
-
 const books = [
   {
     name: "The Bhagavad Gita",
