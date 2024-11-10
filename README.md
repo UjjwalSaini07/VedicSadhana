@@ -62,6 +62,7 @@ Explore the timeless wisdom of the Bhagavad Gita with in-depth shlokas, translat
 
 - But API linking is not Required in localHost, If you follow Installation Process.
 <!--| `api_key` | `string` | **Required**. Your API key |-->
+- API Linked Repo - https://github.com/vedicscriptures/vedicscriptures.github.io
 
 ## How To Build
 
